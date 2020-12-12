@@ -262,7 +262,7 @@ Small function to easily configure and reload the configuration file.
     (org-babel-load-file (expand-file-name emacs-config-org-file)))
 #+END_SRC
 ** Custom keystrokes
-All (most) the custom key combinations that I use regularly.
+All (most) the custom key combinations that I use regularly. It maps the Control z to its own map where I have most freedom.
 #+BEGIN_SRC emacs-lisp
   ;; set up my own map for files, folder and windows
   (define-prefix-command 'z-map)
