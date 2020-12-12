@@ -1,0 +1,128 @@
+#+TITLE: Research Proposal
+#+SUBTITLE: International Regime Effectiveness - Complexity As The Path Towards Global Sustainability
+#+AUTHOR: Montserrat Koloffon Rosas
+#+email: montserratkoloffon@gmail.com
+#+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [a4paper]
+#+LaTeX_HEADER: \usepackage[left=1in,top=1in,right=1in,bottom=1.5in]{geometry}
+#+LaTeX_HEADER: \usepackage{palatino}
+#+LaTeX_HEADER: \usepackage{sectsty}
+#+LaTeX_HEADER: \usepackage{engord}
+#+LaTeX_HEADER: \usepackage{cite}
+#+LaTeX_HEADER: \usepackage{graphicx}
+#+LaTeX_HEADER: \usepackage{setspace}
+#+LaTeX_HEADER: \usepackage[compact]{titlesec}
+#+LaTeX_HEADER: \usepackage[center]{caption}
+#+LaTeX_HEADER: \usepackage{multirow}
+#+LaTeX_HEADER: \usepackage{ifthen}
+#+LaTeX_HEADER: \usepackage{longtable}
+#+LaTeX_HEADER: \usepackage{color}
+#+LaTeX_HEADER: \usepackage{listings}
+#+LaTeX_HEADER: \usepackage{pdfpages}
+#+LaTeX_HEADER: \usepackage{nomencl}	% For glossary
+#+LaTeX_HEADER: \usepackage{pdflscape}	% For landscape pictures and environment
+#+LaTeX_HEADER: \usepackage{verbatim} 	% For multiline comment environments
+#+LaTeX_HEADER: \usepackage[table]{xcolor}
+#+LaTeX_HEADER: \usepackage{amssymb,amsmath}
+#+LaTeX_HEADER: \usepackage{fancyhdr} %For headers and footers
+#+LaTeX_HEADER: \pagestyle{fancy} %For headers and footers
+#+LaTeX_HEADER: \usepackage{lastpage} %For getting page x of y
+#+LaTeX_HEADER: \usepackage{float} %Allows the figures to be positioned and formatted nicely
+#+LaTeX_HEADER: \restylefloat{figure} %and this command
+#+LaTeX_HEADER: \usepackage{url} %Formatting of yrls
+#+LaTeX_HEADER: \lhead{Montserrat Koloffon Rosas}
+#+LaTeX_HEADER: \chead{}
+#+LaTeX_HEADER: \rhead{Research Proposal}
+#+LaTeX_HEADER: \lfoot{CONACyT - Cambio de grado}
+#+LaTeX_HEADER: \cfoot{}
+#+LaTeX_HEADER: \rfoot{\thepage\ of \pageref{LastPage}}
+#+OPTIONS: toc:nil
+# **Preparation
+# ** Research Question
+# - Make sure that the worth of the research question is self-evident.
+# - Argue confidently the importance and significance of this question.
+# ** Methods
+# - Ensure that the methods:
+#   1. are clearly articulated
+#   2. are logical
+#   3. take into consideration the potential hurdles to effective data collection and analysis.
+#   4. are ethical
+#   5. are practical/doable
+# ** Demonstrate the merits of the researcher
+# - Luckily I am in a possition where my assessors know me and have a feel for what I am capable of, #however, it still needs to pass through the eyes of the Conacyt. The way to show my ability is only #through the research proposal, so ensure:
+#   1. A strong short literature review
+#   2. A strong argument for the methodological case
+#   3. High quality writting throughout the proposal
+# ** The Idea
+# - My idea is to reassess the topic of international regime effectiveness through the lens of #complexity science to gain a clearer understanding of the drivers of effectiveness.
+# ** Include in the proposal
+# *** What is the context of your study?
+# - Academics & practitioners have struggled to pinpoint the international regime effectiveness drivers.
+# *** What have other researchers found?
+# - Quote the most important parts of my thesis' literature review
+# *** Where do your answers lie?
+# - In mapping and clearly understanding the international regimes' system.
+# *** What are your proposed methods?
+# - Creation of system dynamics model for international regime effectiveness.
+# *** What about costs? Will you finish on time?
+# - Create calendar
+# ** To consider 
+# - Check what I like about Bas' & Prof. Detlef's proposals and  add it here
+# - Check whether Philipp & Oscar write in third person or in first person
+# - 'Write tight'
+# - Write enough (8 pages max with the necessary ammount of information)
+# - Write for the 'non-expert' (this is important, because I may end up wanting to show this to the #wider audience)
+# - Do your homework - make sure everything is accurate
+# - Don't overquote
+# * Sections
+* Acronyms
+#+ATTR_LATEX: :align l|l
+|--------------+----------------------------------------------------|
+| *Abbreviation* | *Definition*                                         |
+|--------------+----------------------------------------------------|
+| UN           | United Nations                                     |
+| UNCHE        | United Nations Conference on the Human Environment |
+| UNGA         | United Nations General Assembbly                   |
+|--------------+----------------------------------------------------|
+* Abstract
+Most international regimes governing areas related to environmental sustainability have consistently reached low levels of impact effectiveness. This phenomenon has recieved substancial scholar attention for the last three decades, and yet it remains unclear what constitute the drivers of (impact) effectiveness. Practically, this translates in unachieved goals, and thus, further environmental deterioration. I argue that one significant aspect accounting for the inconclusive results from studies around this topic, is that the potential drivers of effectiveness have been investigated independently, failing to account for the effects that arise from their interaction. In this research project I aim to re-addres the effectiveness question through the lens of complexity science. This project is guided by the central premise of systems thinking that in order to perform effective problem solving it is necessary to understand the underlying structure of the system. As such, the main contribution of this investigation will be the creation and validation of a simulation model of the international regimes system underlying structure. Afterwards, this model will allow to generate and test hypotheses, enabling a more certain identification of critical features for (impact) effectiveness in the system, or the lack thereoff.
+* Aims/objectives
+The overarching aim of this project is to contribute towards the solution of common problems on a global level by sheding light on the underlying structure of the international regimes system, and thus enable a clear identification of the (impact) effectiveness drivers. The development of this project would contribute to the following obbjectives:
+1. improve the scientific understanding of the effects produced by interactions between the regime characteristics most widely accepted as potential effectiveness drivers,
+2. improve the scientific understanding of the possibilities for optimization of existing international regimes, and the design of new ones, and
+3. support the global governing process related to environmental sustainability, and sustainable development in general.
+* Research question/hypothesis
+After repeated efforts to identify the effectiveness drivers for international regimes through a variety of different research designs, results remain ambiguous and the consensus among experts appears to be shifting towards the recognition that there are no panaceas when it comes to regime effectiveness. In this project I aim to re-adress the scientific question of *what constitute the critical elements of an international regime that lead to increased levels of impact effectiveness* by uncovering the underlying structure of the system at play. While fully acknowledging the conclusions reached by previous studies, as well as exerting caution not to pursue miraculous silver bullets, I argue that the field of complexity science offers a better fitting methodology to analyze this question.
+Because of the nature of this approach (see section on data collection and analysis), the hypothesizing process is emergent, and thus at this point it is only possible to state that it will revolve around deepening the understanding of the system's behaviour. More specifically, the hypotheses will make predictions of how the impact effectiveness variable behaves, whenever further variables is added and eliminated from the model, or its parameter is modified in a certain way. The simulation model itself will serve as the main hypothesis testing tool.
+* Background
+There is scientific consensus around the fact that current human development practices are unsustainable, in the sense that the consequences generated are compromising the ability of future generations to meet their own needs cite:brundtland1987our. As a response to a series of admonitions raising awareness on this matter during the 60s (see for example: cite:carson2002silent,boulding19661966,ehrlich1968the,hardin1968the,meadows1972limits), the United Nations Conference on the Human Environment (UNCHE) took place in 1972 in Stockholm. This conference kindled a period of intense activity in the international community, where nations around the world signed a variety of treaties, declaring their readiness to do their part to address different environmental issues. Indeed, twenty years after the conference took place, it was estimated that more than half of the 140 multilateral environmental treaties adopted since 1921 up to that point, had been concluded /after/ the UNCHE (cite:levy1992institutions.
+After this period of rapid creation of international regimes, and despite inconclusive results from science investigating whether and how these agreements could achieve success at problem-solving, the new millenium started with the adoption of the United Nations Millenium Declaration, a novel approach grouping several development-related issue areas under the umbrella of one single international regime. This integral approach was expanded in 2015 at the UN General Assembbly with the adoption of the 2030 Agenda for Sustainable Development, which outlines 17 Sustainable Development Goals, each one dedicated to a different development issue area. It is worth noting, that some goals explicitly recognize the existing regimes governing the issue at hand[fn:1]. Scholars have pointed out that "governments' enthusiasm for goal setting, however, is not yet matched by knowledge about its prospects or limits as a governance strategy" cite:kanie2017introduction. Put differently, scientificaly, it is still unclear whether this approach will be more effective than the regimes addressing one single issue area.
+In sum, most international regimes focusing in governing one single issue area have shown little to no effectiveness, and in some cases even reverse trends are observed cite:young2011; success in achieving the Millennium Development Goals was mixed at best cite:andersen2017lessons; and while the fact that sustainable development is being addressed through an integral approach is an advance in itself, recent predictions (made even before the new challenges brought by the COVID-19 pandemic) warned that at the current rate, most of the SDGs would not be met cite:nature2020get. This means that while there have been continuous and in many ways increased efforts to solve shared challenges on a global scale, clarity is still lacking when it comes to regime design aspects necessary to boost impact effectiveness, leaving practitioners involved in the process of regime formation and execution with little science-backed guidance in this regard.
+This gap is crucial to fill, if urgently needed progress is to be made before reaching irreversible tipping points, especially with pressing environmental threats. An additional layer of urgency has emerged in face of the COVID-19 pandemic, which has intensified already existing challenges, and brought new ones. In this regard, experts have agreed on the importance of developing methodologies that can assist in identifying the most efficient ways possible for the allocation of efforts and ressources[fn:2]. Finally, it is worth pointing out, that this research is not limited to one single issue area, but instead will benefit international regimes all across the board, serving as a tool to simultaneously enhance the sustainability problem-solving process on a global scale.
+* Literature review
+The previous section has outlined the development of globbal (environmental) governance on the ground. From the academic perspective, at first, research focused on investigating the phenomenon of regime formation. A core question at the time was whether regimes would actually make a difference. This debate, however, took place primarily on a theoretical level cite:levy1992institutions. By the 90s, enough time had passed to start observing varying results on an empirical level, and with that, the research focus shifted towards understanding the characteristics that made a regime effective at solving the probblem it was designed to address.
+The group of scholars involved in the study of international regime effectiveness made remarkable efforts to work together and ensure the comparability of their findings cite:young1994international. Yet, despite their collaborative spirit and rigurous research designs, authors faced methodological limitations (see: cite:mitchell1998empirical,mitchell2004beyond) that prevented them from reaching compelling, unambiguous, and generalizable conclusions about the effectiveness drivers. Instead, the body of literature produced during this decade presents a myriad of different regime design characteristics as potential explanatory variables for regime effectiveness. Unfortunately, both the extensive list of possible effectiveness drivers, together with the low certainty in the actual role that each one of them play, are two factors that hindered the possibility of offering significant guidance to  practitioners involved in the process of regime design. Finally, authors ended up agreeing on the more gereral conclusion that it is unrealistic to search for panaceas for regime effectiveness. This position is also consistent with Ostrom's findings on institutional arrangements for governing common-pool ressources cite:ostrom2010beyond.
+Research on regime effectiveness did not disappear with the new millenium and the new Millennium Development Goals, but it did evolve. In the early 2000's, two notable developments include the refining of the methods to measure regime effectiveness cite:sprinz2004separating, and the introduction of the idea that in order to analyse institutional influence, it could be necessary to consider the "problem structure" cite:wettestad2001designing,mitchell2006problem. Furthermore, the concepts of  accountability and legitimacy recieved increased attention as two crucial components to ensure effectiveness (see for example: cite:andersen2005effectiveness,backstrand2006multi,mason2008governance,najam2010global,lederer2011cdm).
+Parallel to that, another relevant line of research that grew over this period was the use of more integral, often multidisciplinary approaches, such as sustainability science, and earth system science. These scopes aim at understanding -respectively-, the fundamental character of interactions between nature and society cite:kates2001sustainability; and the structure and functioning of the Earth as a complex system cite:lawton2001earth. These types of analysis are a good analytical fit accompanying the integral governing approaches such as the SDGs. Good examples include research on the water, energy, and food nexus cite:endo2017review, as well as recent efforts to adapt  existing integrated assessment models for climate change to develop integrative scenarios in the contest of the SDGs cite:bleischwitz2018resource.
+All in all, the increasingly integral approaches taken both in research and in science are steps in the right direction, however this type of analytical frameworks are yet to be applied more widely by social scientists. While a few researchers have embraced complexity science for assessments on international affairs, sustainability policy making, and even governance, cite:rosenau1999many,tabara2013transformative,young2017governing, studies of this kind remain scarce. This work aims to contribute to closing that crucial gap by analyzing the structure international regimes as a complex adaptive system itself. It is unquestionable that during the past decades, publications on regime effecitveness laid the foundations of this critical global environmental governance sub-field. Yet, the lack of success in producing compelling answers to its main researh question, and indeed the lack of progress observed on the ground, suggests thet there is room for improvement in the approach taken. By re-assessing the regime effectiveness question through the complexity science lense, the goal is not to find a miraculous panacea. There are good reasons to argue however, that understanding the international regimes' system underlying structure /is itself/ the panacea that will enable and inform future work on regimes' design and optimization for effectiveness.
+* Theoretical perspective and methodology
+This project is located within the intersection between the international regimes' theories, and complexity science methods. Theoretically, it is based on the existing literature about regime effectiveness, including that focusing in accountability, legitimacy, and transparency. Methodologically, this research operates from the paradigm of complexity science, including the core conceptual principles of systems thinking, and the visualizations and modelling tools from system dynamics.
+In a nutshell, the effectiveness question will be addressed from a complexity angle, ie. analyzing the effectiveness of international regimes as a dynamic system with interconnected variables forming causal loops. This seeks to improve on existing models based on linnear causality paradigms, which analyze potential effectiveness drivers independently.The primary deliverable from this project will be a single unifying simulation model (based on the causal loop diagram) which will serve as a guide for the generation of hypotheses, as well as a hypothesis-testing tool.
+* Methods of data collection and analysis
+Practically, the project will be divided in two stages. In a first instance, a system dynamics simulation model will be built and validated. This will make use of an exhaustive and systematic literature review, which will be used as input from experts. The second stage beginns only after the model has been calibrated such that it reliably mirrors the behavior of the system under study. The calibrated model will be applied to analyze at least one case study (to be determined) and generate specific advise for practitioners on how to optimize the regime design for effectiveness, backed by simulation scenarios. Depending on the regime documentation available, involved practitioners may be interviewed in this stage.
+* Limitations/delimitations
+This study is delimitated by being based on the existing literature on international regimes, and will be further delimitated by the selected case studies. This means that potential alternative independent variables that have not been considered on published works up to this point may bbe overseen. This risk is taken knowingly, taking into account that relying on the research experts have produced up to this point is the safest starting point. In the course of the study, new gaps and missing variables may be identified (indeed this is one of the purposes of building the simulation model) but it is important to recognize that the new discoveries will be based on the model within the existing international regimes' research paradigm.
+A further limitation is that the model may not be generalizable to all types of international regimes. However I am confident that at the very least it will be useful for the design of those regimes similar to the ones used to validate the model, ie. international regimes on environmental sustainability, and maybe even more integral regimes such as the SDGs.
+#+LATEX: \clearpage
+* Timeline
+
+#+NAME: fig:timeline
+#+CAPTION: Timeline of this project.
+#+ATTR_LATEX: :width 1.05\textwidth :placement [h!]
+[[file:timeline.png]]
+
+bibliographystyle:unsrtnat
+bibliography:~/Dropbox/roamnotes/literature/references.bib
+
+[fn:1] Examples include -among others- Goal 2 acknowledging the Doha Development Round; Goal 3 setting as a target the implementation of the World Health's Organization Framework Convention on Tobacco Control; Goal 8 and 12 acknowledging the Framework on Programmes on Sustainable Consumption and Production; and Goal 13 "acknowledging that the United Nations Framework Convention on Climate Change is the primary international, intergovernmental forum for negotiating the global response to climate change".
+[fn:2] This point was raised by Martha Delgado, a leading figure in the environmental movement, currently serving as the deputy Minister of the Mexican Secretariat of Foreign Affairs, on June 1st 2020, during a virtual High Level roundtable organized by Mexico’s national Center for Prevention of Disasters (CENAPRED).

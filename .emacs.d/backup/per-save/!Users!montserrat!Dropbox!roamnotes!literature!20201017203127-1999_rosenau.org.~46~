@@ -1,0 +1,65 @@
+#+title: 1999_Rosenau
+* Tags
+[[file:../knowledge_base/20201017203910-complexity_theory.org][Complexity Theory]], [[file:../knowledge_base/20201017204639-world_affairs.org][World Affairs]] 
+* Reference
+@article{rosenau1999many,
+  title={Many Damn Things Simultaneously--at Least for Awhile: Complexity Theory and World Affairs},
+  author={Rosenau, James N},
+  journal={Theoria},
+  volume={46},
+  number={94},
+  pages={48--66},
+  year={1999},
+  publisher={Berghahn Journals}
+}
+* Date
+1st Read: 13/10/2020
+1st Summary: 19/10/2020
+* Purpose
+PhD research proposal
+* Summary
+=In this article, ~Rosenau~ correctly identifies the limits of complexity theory. It is important to point out that he is referring to complexity theory alone, and thus he cautions against treating complexity theory as a panacea for instability at the risk of disillusionment. Personally, I suspect that by integrating RCA to the complexity approach (such as ~Jack~ suggests) addresses the limits that ~Rosenau~ identifies.=
+* Highlights
+** Introduction
+- ~Rosenau~ =starts by explaining that he uses the term= [[file:../knowledge_base/20201020180842-fragmentation.org][fragmentation]] =to label= "this emergent epoch [the 90s] of multiple contradictions [...] in order to summarily capture the tensions between the fragmenting and integrating firces that sustain world affairs".
+- =The argument of the paper is that= "a [...] discrepancy prevails between our intellectual progress toward gasping the underlying complexity of human systems and our emotional expectation that advances in complexity theory may somehow point the way to policies which can ameliorate the uncertainties inherent in a fragmentative world".
+-  =About this, before seeing ~Leo's~ video on systems thinking, I didn't know anything about this approach. I completely resonated with the explanation from the moment I came across it. If I'm not mistaken, I watched that video when it came out, ie. in 2017. Then, I think around winter that year I discovered Thwink.org (also through ~Leo's~ blog) and became obsessed about it. I educated myself further on the application of systems thinking, and it was only until March 2018 that I contacted ~Jack~. To put things in context, in February 2018 I had just been in the UN in a series of events about the SDGs and was growing disappointed in the type of disintegrated and "fragmented" (not in Rosenau's sense) action that was being taken. I have to admit that the major appeal that Thwink.org had for me, was that it was indeed offering a panacea for achieving the SDGs. I want to point out, however, that there is a good reason why I still believe that Thwink.org is offering the most convincing potential panacea (leaving spirituality aside for a moment) for achieving sustainable development. Thwink.org's approach, contrary to what any other complexity scientist out there is doing, is combining the power of system dynamics with Root Cause Analysis, and per definition, a panacea is according to the OLD "that which solves all problems related to a particular situation". I would change the word "problems" for "symptoms", but bottom line, a panacea is that single strategy of only focusing in addressing the root causes, to fix all undesirable symptoms.= 
+- Uncertainty since end of Cold War ↑, Analysts seek panaceas for instability ↑, hope in study of complexity theory ↑
+- "all the circumstances are in place ofr an eventual disillusionment with complexity theory"
+=Rossenau isn't taking RCA into consideration, and thus, he is right when he argues that complexity theory will disappoint if treated as a panacea by analysts. As ~Jack~ once said, without RCA, system dynamics rely on individual brilliance to identify the relevant nodes. Not using RCA leds him to make the observation that complexity theory's...=
+- "benefits can be exaggerated and thus disillusioning"
+** Uncertainties
+- ~Rosenau~ =argues that the Cold War offered a scenario in which the course of events= "was comprehensible, reliable, and continuous". =By contrasts, he suggests that= "today [during the post-Cold War...] uncertaonty is the norm and apprehension the mood. [and] Whatever may be the arrangements that have replaced the bipolarity of US-Soviet rivalry, they are at best incipient structures, and at worst, [...] widespread disarray. [...] Put differently [...] it is an epoch of multiple contradictions".
+- ~Rosenau~ =believes= "that we aree deeply immersed in an epochal transformation sustained by a new worldview about the essential nature of human affairs, a new way of thinking about how global politics unfold."
+- ~Rosenau~ =attributes as the sources of complexity both= "the absence of a superpower rivalry [but also] Technological dynamics, and [everything that comes with it]"
+- "our conceptual equipment needs to be enhanced and refined [...] under some conditions nonlinear approaches are more suitale than the linear conceptual equipment that has served for so long as the asis of analysis, that the disciplinary boundaries that have separated the social sciences from each other and from the hard sciences are no longer clear-cut, and that the route to understanding and sound policy initiatives has to be traversed through interdisciplinary undertakings." =(About this, see ~Gaddis~ 1992).=
+- "It is perhaps a measure of this gap between the transformative dynamics and the conceptual equipment available to comprehend them that our vocabulary for understanding the emergent world lags well behind the changes themselves." =I tend to agree, and the UN has contributed to this "complexification" by taking its overly-inclusive approach.=
+- "We do not have techniques for analysing the simultameity of events such that the full array of their interconnections and feedack loops are identified." =In mainstream social sciences? no, we don't.=
+** Searching for Panaceas
+- "it is understandable that both the academic and policy-making communities are vulnerable to seraching for panaceas."
+- "officials and thoughtful observers alike may be inclined to seek security through an overall scheme that seems capable of clarifying the challenges posed by the emergent epoch. Complexity theory is compelling in this regard. The very fact that it focuses on complex phenomena and presumes that these are subject to theoretical inquiry, thereby implying that complex systems are patterned and ultimately comprehensible, may encourage undue hope that humankind's prolems can be unravelled and effective policies designed to resolve them pursued." =This is 100% true, and it is in fact what we are seeing, but only because those promises that complexity offers can only be delivered when used /in combination/ with RCA.=
+- "Stirring accounts of @The Santa Fe Institute@, where complexity theory was nursed into being through the work of economists, statisticians, computer scientists, mathematicians, biologists, physicists, and political scientists in a prolonged and profoundly successful interdisciplinary collaboration, kindled these hopes."
+- =Some literature by authors from the= @Santa Fe Institute@
+- =hallo= !g! now this is green !g!
+- !b!is this now blue?!b!
+* Related Literature
+- ~Gaddis~ =is a very influential, rather conservative American historian. Allegedly in this book he points out the limitations of the methodological tools available for social scientists and its shortcomings.=
+@article{gaddis1992international,
+  title={International relations theory and the end of the Cold War},
+  author={Gaddis, John Lewis},
+  journal={International security},
+  volume={17},
+  number={3},
+  pages={5--58},
+  year={1992},
+  publisher={JSTOR}
+}
+- =This book tells the story of the= &Santa Fe Institute& 
+@book{waldrop1993complexity,
+  title={Complexity: The emerging science at the edge of order and chaos},
+  author={Waldrop, Mitchell M},
+  year={1993},
+  publisher={Simon and Schuster}
+}
+!_ hallojaks  _!
+!_hallo_!

@@ -1,0 +1,276 @@
+% Created 2020-10-10 Sat 11:59
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Bas Chatel}
+\date{\today}
+\title{Emacs custom configuration}
+\hypersetup{
+ pdfauthor={Bas Chatel},
+ pdftitle={Emacs custom configuration},
+ pdfkeywords={},
+ pdfsubject={An org-babel based emacs configuration},
+ pdfcreator={Emacs 27.1 (Org mode 9.3)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Personalization}
+\label{sec:org616804e}
+Some personalization things.
+\begin{verbatim}
+(setq user-full-name "Bas Chatel" user-mail-address "bastiaan.chatel@gmail.com")
+\end{verbatim}
+\section{File layout and paths}
+\label{sec:orge092396}
+Here we provide important directories and files. For example, I use Dropbox to synchronise all my non-programming files and github for my programming projects. Furthermore the configuration files are written here for easy access in the z-map that is described later on.
+
+\begin{center}
+\begin{tabular}{ll}
+\hline
+ & - Dotfiles\\
+ & - Github\\
+ &  & - Programming folders\\
+ & - Dropbox\\
+ &  & - Org-roam directory\\
+ &  &  & - Ideas\\
+ &  &  & - Knowledge\textsubscript{base}\\
+ &  &  & - Org-journal\\
+ &  &  & - Papers\textsubscript{and}\textsubscript{articles}\\
+ &  &  & - Personal\\
+ &  &  & - Refs\\
+ &  &  & - Snippets\\
+ &  &  & - Work\\
+ &  & - Bibliography\\
+ &  & - PhD\\
+\end{tabular}
+\end{center}
+
+\begin{verbatim}
+;; General directories
+(setq dropbox-dir "~/dropbox_montse/Dropbox/")
+
+;; Roam paths
+(setq roamnotes-path (concat dropbox-dir "roamnotes/"))
+(setq roam-db-path "~/org-roam.db")
+
+;; Configuration files
+(setq bib-folder-path (concat roamnotes-path "bibliography/"))
+(setq references-bib-file (concat bib-folder-path "references.bib"))
+\end{verbatim}
+\subsection{Management - Knowledge}
+\label{sec:org5f07c71}
+\subsubsection{Citations}
+\label{sec:orga5daac8}
+\subsubsection{Org roam}
+\label{sec:org94eac8b}
+One of the cornerstones of my knowledge management. This is based on Roam research or zettelkasten. 
+\begin{verbatim}
+(use-package org-roam
+      :ensure t
+      :hook
+      (after-init . org-roam-mode)
+      :custom
+      (org-roam-directory  roamnotes-path)
+      (org-roam-db-location roam-db-path)
+      :bind (:map org-roam-mode-map
+	      (("C-c n l" . org-roam)                          ;; Show backlinks in an extra buffer on the left
+	       ("C-c n f" . orb-find-non-ref-file)             ;; Find your notes easily through the database
+	       ("C-c n g" . org-roam-graph-show))              ;; Show your knowledge-base in graph shape
+	      :map org-mode-map
+	      (("C-c n i" . orb-insert-non-ref))               ;; Insert a link to a note
+	      (("C-c n I" . org-roam-insert-immediate))))      ;; Same as previous
+
+(setq org-roam-capture-templates
+      '(
+	;; Alle informatie met referenties naar waar ik het vandaan heb. Dit wordt het grootste deel die concepten uitlegt met referenties naar snippets.
+	("k" "Knowledge base" plain (function org-roam--capture-get-point)
+	"%?"
+	:file-name "knowledge_base/%<%Y%m%d%H%M%S>-${slug}"
+	:head "#+title: ${title}\n\n* "
+	:unnarrowed t)
+
+	;; Hier staat alle informatie over mensen die ik ken; waar ik ze van ken, waar ze goed in zijn, verjaardag, etc. Dit functioneert als basis waar ik naar kan refereren als ik hulp nodig heb van iemand en ook voor leuk dat ik kan terug zien wat ik met die persoon heb gedaan vanuit de org-journal folder.
+	("p" "Personal" plain (function org-roam--capture-get-point)
+	  "%?"
+	  :file-name "personal/%<%Y%m%d%H%M%S>-${slug}"
+	  :head "#+title: ${title}\n- birthday :: \n- Contact\n  - Phonenumber :: \n  - Email :: \n\n* "
+	  :unnarrowed t)
+
+	;; Hier komen alle interessante ideeën die niet perse met literatuur versterkt worden, niet goed uitgewerkt zijn of simpelweg een interessante notion is waar ik later iets mee kan.
+	("i" "Ideas" plain (function org-roam--capture-get-point)
+	  "%?"
+	  :file-name "ideas/%<%Y%m%d%H%M%S>-${slug}"
+	  :head "#+title: ${title}\n\n* "
+	  :unnarrowed t)
+
+	;; Alle volledig uitgewerkte papers, blog posts, werken die ik doe (nog even nadenken of dit privé moet of niet, denk het wel want publicaties en protocols etc)
+	("b" "Bibliography" plain (function org-roam--capture-get-point)
+	  "%?"
+	  :file-name "bibliography/%<%Y%m%d%H%M%S>-${slug}"
+	  :head "#+title: ${title}\n\n* "
+	  :unnarrowed t)
+
+	;; Alle volledig uitgewerkte papers, blog posts, werken die ik doe (nog even nadenken of dit privé moet of niet, denk het wel want publicaties en protocols etc)
+	("w" "Work" plain (function org-roam--capture-get-point)
+	  "%?"
+	  :file-name "work/%<%Y%m%d%H%M%S>-${slug}"
+	  :head "#+title: ${title}\n\n* "
+	  :unnarrowed t)
+      )
+
+;; On search for notes, prepend its respective directory name
+(setq org-roam-tag-sources '(prop last-directory))
+\end{verbatim}
+\subsection{Management - Workflow/project}
+\label{sec:org4f80377}
+\subsubsection{Tags}
+\label{sec:org3491ac3}
+\begin{verbatim}
+(setq org-tag-alist '(("@short" . ?s) ("@medium" . ?m) ("@long" . ?l) ("@very long" . ?v)
+		      ("@write" . ?w) ("@read" . ?r) ("@code" . ?c) ("@email" . ?e) ("@bellen" . ?b)
+		      ("@kopen" . ?k) ("@terugbetalen" . ?t) ("@gaan" . ?g)))
+\end{verbatim}
+\subsection{Org}
+\label{sec:org22f32a8}
+\subsubsection{Org Capture}
+\label{sec:org2ff6d2a}
+Org capture makes creating a template from org a little easier. It creates a new file in which a function can be called and the template will be inserted.
+\begin{verbatim}
+(global-set-key (kbd "C-c c")
+		'org-capture)
+
+;; (setq org-capture-templates '(("j" "Journal entry" entry (function org-journal-find-location)
+;;                                "* Day journal\n** %(format-time-string org-journal-time-format)%?")))
+\end{verbatim}
+\subsection{Latex setup}
+\label{sec:org1db814e}
+Setup some templates for latex
+\begin{verbatim}
+(setq org-latex-prefer-user-labels t)
+(setenv "PATH" "/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
+(require 'ox-latex)
+(unless (boundp 'org-latex-classes)
+  (setq org-latex-classes nil))
+(add-to-list 'org-latex-classes
+	     '("article"
+	       "\\documentclass{article}"
+	       ("\\section{%s}" . "\\section*{%s}")
+	       ("\\subsection{%s}" . "\\subsection*{%s}")
+	       ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+	       ("\\paragraph{%s}" . "\\paragraph*{%s}")
+	       ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+)
+(add-to-list 'org-latex-classes
+	     '("book"
+	       "\\documentclass{book}"
+	       ("\\part{%s}" . "\\part*{%s}")
+	       ("\\chapter{%s}" . "\\chapter*{%s}")
+	       ("\\section{%s}" . "\\section*{%s}")
+	       ("\\subsection{%s}" . "\\subsection*{%s}")
+	       ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+)
+(add-to-list 'org-latex-classes
+	     '("koma-article"
+	       "\\documentclass{scrartcl}"
+	       ("\\section{%s}" . "\\section*{%s}")
+	       ("\\subsection{%s}" . "\\subsection*{%s}")
+	       ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+	       ("\\paragraph{%s}" . "\\paragraph*{%s}")
+	       ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+)
+(add-to-list 'org-latex-classes
+	     '("assignment"
+	       "\\documentclass[11pt,a4paper]{article}
+	       \\usepackage[utf8]{inputenc}
+	       \\usepackage[T1]{fontenc}
+	       \\usepackage{fixltx2e}
+	       \\usepackage{graphicx}
+	       \\usepackage{longtable}
+	       \\usepackage{float}
+	       \\usepackage{wrapfig}
+	       \\usepackage{rotating}
+	       \\usepackage[normalem]{ulem}
+	       \\usepackage{amsmath}
+	       \\usepackage{textcomp}
+	       \\usepackage{marvosym}
+	       \\usepackage{wasysym}
+	       \\usepackage{amssymb}
+	       \\usepackage{hyperref}
+	       \\usepackage{mathpazo}
+	       \\usepackage{color}
+	       \\usepackage{enumerate}
+	       \\definecolor{bg}{rgb}{0.95,0.95,0.95}
+	       \\tolerance=1000
+		     [NO-DEFAULT-PACKAGES]
+		     [PACKAGES]
+		     [EXTRA]
+	       \\linespread{1.1}
+	       \\hypersetup{pdfborder=0 0 0}"
+	       ("\\section{%s}" . "\\section*{%s}")
+	       ("\\subsection{%s}" . "\\subsection*{%s}")
+	       ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+	       ("\\paragraph{%s}" . "\\paragraph*{%s}"))
+)
+\end{verbatim}
+\subsection{Org-ref}
+\label{sec:org93b9588}
+\begin{verbatim}
+(require 'org-ref)
+
+(setq reftex-default-bibliography '(references-bib-file))
+
+;; see org-ref for use of these variables
+(setq org-ref-bibliography-notes (concat bib-folder-path "notes.org")
+      org-ref-default-bibliography references-bib-file
+      org-ref-pdf-directory bib-folder-path)
+
+(setq bibtex-completion-bibliography '(references-bib-file)
+      bibtex-completion-library-path bib-folder-path
+      bibtex-completion-pdf-field "file"
+      bibtex-completion-notes-template-multiple-files
+       (concat
+	"#+title: ${title}\n"
+	"#+roam_key: cite:${=key=}\n"
+	"* TODO Notes\n"
+	":PROPERTIES:\n"
+	":Custom_ID: ${=key=}\n"
+	":NOTER_DOCUMENT: %(orb-process-file-field \"${=key=}\")\n"
+	":AUTHOR: ${author-abbrev}\n"
+	":JOURNAL: ${journaltitle}\n"
+	":DATE: ${date}\n"
+	":YEAR: ${year}\n"
+	":DOI: ${doi}\n"
+	":URL: ${url}\n"
+	":END:\n\n")
+      bibtex-completion-notes-path bib-folder-path)
+
+;; open pdf with system pdf viewer (works on mac)
+(setq bibtex-completion-pdf-open-function
+  (lambda (fpath)
+    (start-process "open" "*open*" "open" fpath)))
+
+(setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
+(setq org-latex-prefer-user-labels t)
+
+;; Making emacs find latex (so that C-c C-x C-l works on orgmode)
+(setenv "PATH" (concat ":/Library/TeX/texbin/" (getenv "PATH")))
+(add-to-list 'exec-path "/Library/TeX/texbin/")
+(setq org-format-latex-options (plist-put org-format-latex-options :scale 2.5))
+
+\end{verbatim}
+\end{document}

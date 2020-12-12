@@ -1,0 +1,62 @@
+% Created 2020-10-17 Sat 20:55
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Montserrat Koloffon Rosas}
+\date{\today}
+\title{1999\textsubscript{Rosenau}}
+\hypersetup{
+ pdfauthor={Montserrat Koloffon Rosas},
+ pdftitle={1999\textsubscript{Rosenau}},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.3)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Tags}
+\label{sec:org66be140}
+\href{../knowledge\_base/20201017203910-complexity\_theory.org}{Complexity Theory}, \href{../knowledge\_base/20201017204639-world\_affairs.org}{World Affairs}
+\section{Reference}
+\label{sec:org0c19f6c}
+Hallo
+\section{Summary}
+\label{sec:orga31c4ec}
+\subsection{krakaka}
+\label{sec:orgd9d1de0}
+\begin{center}
+\begin{tabular}{lllll}
+hallo & dit & is & een & tabel\\
+\hline
+hj & j & j & kjh & kj\\
+b & ijb & jb & ljh & blj\\
+hb & ljhb & lj & hb & ljhb\\
+ljh & blj & hb & ljhb & ljh\\
+b & ljhb & jhb & ljhb & ljhb\\
+\hline
+\end{tabular}
+\end{center}
+
+\par\vspace{\baselineskip}\noindent
+\section{Highlights}
+\label{sec:org8c88c85}
+\(A=A^T\)
+\section{Related Literature}
+\label{sec:org9dcd8e4}
+$$a_1+a_2=a^3$$
+\end{document}

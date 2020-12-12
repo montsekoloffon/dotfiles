@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>1999<sub>Rosenau</sub> Dissipation of Social Capacity in Social Networks</title>
+<meta name="author" content="(Bas Chatel)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/moon.css" id="theme"/>
+
+<link rel="stylesheet" href="local.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/lib/css/zenburn.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<meta name="description" content="Course slides">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h3>1999<sub>Rosenau</sub> Dissipation of Social Capacity in Social Networks</h3><h4>Reducing Loneliness by Social Gamification</h4><div><small>01-04-20</small><br><small><small>Bas Chatel&nbsp;:&nbsp;<a href="mailto:bastiaan.chatel@gmail.com">bastiaan.chatel@gmail.com</a></small></small></div>
+</section>
+<section id="table-of-contents"><div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-orgf88ffdd">Tags</a></li>
+<li><a href="#/slide-orge814461">Reference</a></li>
+<li><a href="#/slide-orgaa859de">Summary</a></li>
+<li><a href="#/slide-org19dd560">Highlights</a></li>
+<li><a href="#/slide-org7a8ba74">Related Literature</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-orgf88ffdd">
+<h2 id="orgf88ffdd">Tags</h2>
+<p>
+<a href="../knowledge_base/20201017203910-complexity_theory.html">Complexity Theory</a>, <a href="../knowledge_base/20201017204639-world_affairs.html">World Affairs</a>
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orge814461">
+<h2 id="orge814461">Reference</h2>
+<p>
+Hallo
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgaa859de">
+<h2 id="orgaa859de">Summary</h2>
+<div class="outline-text-2" id="text-orgaa859de">
+</div>
+</section>
+<section id="slide-orgcae263d">
+<h3 id="orgcae263d">krakaka</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">hallo</th>
+<th scope="col" class="org-left">dit</th>
+<th scope="col" class="org-left">is</th>
+<th scope="col" class="org-left">een</th>
+<th scope="col" class="org-left">tabel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">hj</td>
+<td class="org-left">j</td>
+<td class="org-left">j</td>
+<td class="org-left">kjh</td>
+<td class="org-left">kj</td>
+</tr>
+
+<tr>
+<td class="org-left">b</td>
+<td class="org-left">ijb</td>
+<td class="org-left">jb</td>
+<td class="org-left">ljh</td>
+<td class="org-left">blj</td>
+</tr>
+
+<tr>
+<td class="org-left">hb</td>
+<td class="org-left">ljhb</td>
+<td class="org-left">lj</td>
+<td class="org-left">hb</td>
+<td class="org-left">ljhb</td>
+</tr>
+
+<tr>
+<td class="org-left">ljh</td>
+<td class="org-left">blj</td>
+<td class="org-left">hb</td>
+<td class="org-left">ljhb</td>
+<td class="org-left">ljh</td>
+</tr>
+
+<tr>
+<td class="org-left">b</td>
+<td class="org-left">ljhb</td>
+<td class="org-left">jhb</td>
+<td class="org-left">ljhb</td>
+<td class="org-left">ljhb</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section>
+<section id="slide-org19dd560">
+<h2 id="org19dd560">Highlights</h2>
+<p>
+\(A=A^T\)
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org7a8ba74">
+<h2 id="org7a8ba74">Related Literature</h2>
+<p>
+\[a_1+a_2=a^3\]
+</p>
+</section>
+</section>
+</div>
+</div>
+<p> Created by Bas Chatel</p>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

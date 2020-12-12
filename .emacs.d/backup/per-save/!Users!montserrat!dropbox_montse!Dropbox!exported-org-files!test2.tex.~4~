@@ -1,0 +1,48 @@
+% Created 2020-10-10 Sat 11:55
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Montserrat Koloffon}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Montserrat Koloffon},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.3)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{ihoahfoaisf}
+\label{sec:orgf0662b8}
+afsasfsdjsfdv
+fvdfvkjdbfnbdf
+bdfbdfbd
+\begin{center}
+\begin{tabular}{lllllll}
+a & b & c & d & e & f & g\\
+\hline
+kjh & j & j & j & j & hkj & h\\
+k & h & kj & hk & jh & kj & bkj\\
+bb & kjb & kj & bkj & b & kjb & kb\\
+jjjj & j & j & j & j & j & j\\
+\hline
+\end{tabular}
+\end{center}
+\(A=A^t\)
+\end{document}

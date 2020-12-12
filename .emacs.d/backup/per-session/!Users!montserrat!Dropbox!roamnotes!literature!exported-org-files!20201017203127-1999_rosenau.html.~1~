@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>1999<sub>Rosenau</sub></title>
+<meta name="author" content="(Montserrat Koloffon Rosas)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/dist/reveal.css"/>
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/dist/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">1999<sub>Rosenau</sub></h1><h2 class="author">Montserrat Koloffon Rosas</h2><p class="date">Created: 2020-10-17 Sat 20:54</p>
+</section>
+<section id="table-of-contents"><div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-org782935a">1. Tags</a></li>
+<li><a href="#/slide-org3f0a920">2. Reference</a></li>
+<li><a href="#/slide-org59f37a8">3. Summary</a>
+<ul>
+<li><a href="#/slide-org303332b">3.1. krakaka</a></li>
+</ul>
+</li>
+<li><a href="#/slide-org68448b7">4. Highlights</a></li>
+<li><a href="#/slide-org73018ed">5. Related Literature</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-org782935a">
+<h2 id="org782935a"><span class="section-number-2">1</span> Tags</h2>
+<p>
+<a href="../knowledge_base/20201017203910-complexity_theory.html">Complexity Theory</a>, <a href="../knowledge_base/20201017204639-world_affairs.html">World Affairs</a>
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org3f0a920">
+<h2 id="org3f0a920"><span class="section-number-2">2</span> Reference</h2>
+<p>
+Hallo
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org59f37a8">
+<h2 id="org59f37a8"><span class="section-number-2">3</span> Summary</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+</section>
+<section id="slide-org303332b">
+<h3 id="org303332b"><span class="section-number-3">3.1</span> krakaka</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">hallo</th>
+<th scope="col" class="org-left">dit</th>
+<th scope="col" class="org-left">is</th>
+<th scope="col" class="org-left">een</th>
+<th scope="col" class="org-left">tabel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">hj</td>
+<td class="org-left">j</td>
+<td class="org-left">j</td>
+<td class="org-left">kjh</td>
+<td class="org-left">kj</td>
+</tr>
+
+<tr>
+<td class="org-left">b</td>
+<td class="org-left">ijb</td>
+<td class="org-left">jb</td>
+<td class="org-left">ljh</td>
+<td class="org-left">blj</td>
+</tr>
+
+<tr>
+<td class="org-left">hb</td>
+<td class="org-left">ljhb</td>
+<td class="org-left">lj</td>
+<td class="org-left">hb</td>
+<td class="org-left">ljhb</td>
+</tr>
+
+<tr>
+<td class="org-left">ljh</td>
+<td class="org-left">blj</td>
+<td class="org-left">hb</td>
+<td class="org-left">ljhb</td>
+<td class="org-left">ljh</td>
+</tr>
+
+<tr>
+<td class="org-left">b</td>
+<td class="org-left">ljhb</td>
+<td class="org-left">jhb</td>
+<td class="org-left">ljhb</td>
+<td class="org-left">ljhb</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section>
+<section id="slide-org68448b7">
+<h2 id="org68448b7"><span class="section-number-2">4</span> Highlights</h2>
+<p>
+\(A=A^T\)
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org73018ed">
+<h2 id="org73018ed"><span class="section-number-2">5</span> Related Literature</h2>
+<p>
+\[a_1+a_2=a^3\]
+</p>
+</section>
+</section>
+</div>
+</div>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

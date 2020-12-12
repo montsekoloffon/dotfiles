@@ -1,0 +1,777 @@
+#+TITLE:RESEARCH PROTOCOL
+#+SUBTITLE: Measuring social interaction through gaming: a feasibility and validation study
+#+AUTHOR: Bas Chatel
+#+email: bas.chatel@radboudumc.nl
+#+DATE: 2020-07-15 Wed
+#+EXPORT_FILE_NAME: C.protocol.2020-6645.1.2020.07.15
+#+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [a4paper]
+#+OPTIONS: toc:t
+#+LATEX_HEADER: \usepackage{natbib}
+#+LATEX_HEADER: \usepackage[version=3]{mhchem}
+#+latex_header: \usepackage{makeidx}
+#+latex_header: \makeindex
+# This ridiculousness is to make the index start in the middle of a page.
+# https://tex.stackexchange.com/questions/23870/index-shouldnt-start-new-page
+#+latex_header: \makeatletter
+#+latex_header: \renewenvironment{theindex}
+#+latex_header:                {\section*{\indexname}%
+#+latex_header:                 \@mkboth{\MakeUppercase\indexname}%
+#+latex_header:                         {\MakeUppercase\indexname}%
+#+latex_header:                 \thispagestyle{plain}\parindent\z@
+#+latex_header:                 \parskip\z@ \@plus .3\p@\relax
+#+latex_header:                 \columnseprule \z@
+#+latex_header:                 \columnsep 35\p@
+#+latex_header:                 \let\item\@idxitem}
+#+latex_header:                {}
+#+latex_header: \makeatother
+
+#+latex_header: \usepackage{glossaries}
+#+latex_header: \makeglossaries
+#+latex_header_extra: \newglossaryentry{acronym}{name={acronym},description={An acronym is an abbreviation used as a word which is formed from the initial components in a phrase or a word. Usually these components are individual letters (as in NATO or laser) or parts of words or names (as in Benelux)}}
+#+latex_header_extra: \newacronym{tla}{TLA}{Three Letter Acronym}
+
+#+LaTeX_HEADER: \usepackage[left=1in,top=1in,right=1in,bottom=1.5in]{geometry}
+#+LaTeX_HEADER: \usepackage{palatino}
+#+LaTeX_HEADER: \usepackage{sectsty}
+#+LaTeX_HEADER: \usepackage{engord}
+#+LaTeX_HEADER: \usepackage{graphicx}
+#+LaTeX_HEADER: \usepackage[center]{caption}
+#+LaTeX_HEADER: \usepackage{multirow}
+#+LaTeX_HEADER: \usepackage{ifthen}
+#+LaTeX_HEADER: \usepackage{longtable}
+#+LaTeX_HEADER: \usepackage{color}
+#+LaTeX_HEADER: \usepackage{listings}
+#+LaTeX_HEADER: \usepackage{pdfpages}
+#+LaTeX_HEADER: \usepackage{nomencl}	% For glossary
+#+LaTeX_HEADER: \usepackage{pdflscape}	% For landscape pictures and environment
+#+LaTeX_HEADER: \usepackage{verbatim} 	% For multiline comment environments
+#+LaTeX_HEADER: \usepackage[table]{xcolor}
+#+LaTeX_HEADER: \usepackage{amssymb,amsmath}
+#+LaTeX_HEADER: \usepackage{fancyhdr} %For headers and footers
+#+LaTeX_HEADER: \pagestyle{fancy} %For headers and footers
+#+LaTeX_HEADER: \usepackage{lastpage} %For getting page x of y
+#+LaTeX_HEADER: \usepackage{float} %Allows the figures to be positioned and formatted nicely
+#+LaTeX_HEADER: \floatstyle{boxed} %using this
+#+LaTeX_HEADER: \restylefloat{figure} %and this command
+#+LaTeX_HEADER: \usepackage{url} %Formatting of yrls
+#+LaTeX_HEADER: \lhead{Research Protocol: Measuring social interaction}
+#+LaTeX_HEADER: \chead{}
+#+LaTeX_HEADER: \rhead{\today}
+#+LaTeX_HEADER: \lfoot{Draft}
+#+LaTeX_HEADER: \cfoot{}
+#+LaTeX_HEADER: \rfoot{\thepage\ of \pageref{LastPage}}
+#+OPTIONS: toc:t num:t ^:{}
+
+# \setcounter{secnumdepth}{0}
+
+#+LATEX: \clearpage
+# * TODOs
+# ** TODO Methods Feasibility study deel afschrijven [[id:F5205AD9-0EE9-4C6F-8FF7-1488B2179DED][Feasibility study]]
+# ** DONE [#A] Persoonlijke gegevens
+# Vragen we naar persoonlijke gegevens of contact gegevens? Zo ja, slaan we die op en voor welk doel? Hoe wordt privacy gewaarborgd?
+# 
+# Hier (summary/risks) kort noemen en in meer detail bij 10.3 data management
+# 
+# ** DONE [#A] Willen we andere spelers ook volgen (ik zeg wel, nog even goed over na denken wel)
+# ** DONE [#A] Beschrijf spellen uitgebreider in intervention
+# Misschien hier ook meer detail toevoegen, biiv dat het gaat om een puzzel game waarbij je door een bekende van een bekende wordt uitgenodigd om eerst samen de inhoud van de puzzel te bedenken en deze vervolgens samen op te lossen. Overleg en samenwerking is nodig om de puzzel op te kunnen lossen. 
+# Omdat dit spel alleen samen met een ander en gelijktijdig gespeeld kan worden, is de verwachting dat het niet heel frequent gespeeld kan worden. Om de spelers een wat gevarieerder spelaanbod te geven worden daarnaast ook niet-sociale spellen aangeboden. Deze kunnen op eigen initiatief gespeeld worden.
+# 
+# Ik zou de niet-sociale spellen nu geen controle spellen nodig, omdat dat lezers mogelijk op het verkeerde been zet: kan de indruk wekken dat we spellen willen vergelijken of effectiviteit en dat is niet zo.
+# ** DONE [#A] Bedenken of we contact gegevens willen opslaan
+# Ik zeg dat dit niet perse hoeft, aangezien we ze ook in de app kunnen benaderen. Mochten we dit wel willen dan vragen we alleen naar naam en telefoon nummer dat we kunnen opslaan icm U_ID.
+# ** DONE [#A] Validity
+# - Heb je al ergens uitgelegd hoe je sociale interactie gaat meten: welke componenten ga je daarin meenemen? Je hoeft nog niet exact het algoritme te beschrijven, maar wel welke informatie je hiervoor gaat gebruiken.
+# ** DONE [#A] Intervention
+# Beschrijf de spellen wat meer, ze dat het voornamelijk asynchroon gaat, meerdere soorten spellen. Controle kan in principe weg gelaten worden nu.
+# ** TODO [#B] Timing 
+# - Ik vind de term in-game wat verwarrend want dan denk ik steeds dat er alleen maar vragen tijdens het spelen worden gesteld en dat is niet zo. De vragen worden vanuit de portal gesteld, niet middels of tijdens een spel. Waarom noem je het niet gewoon online questionnaires of surveys? Overigens, er is nog een derde manier van data verzameling, nl de data die je extraheert uit het spelgedrag.
+# - Voor mijn gevoel herhaal je hier wat je bij 8.1.2 hebt staan. Overigens vind ik het zo puntsgewijs wel makkelijker te volgen dan uitgeschreven in zinnen. Als je 8.1.2 en 8.1.3 beiden behoudt, zorg dan dat dit op elkaar is afgestemd. Zie ook bovenstaande opmerkingen.
+# ** TODO [#A] Analysis
+# Linear-by-linear chi-squared test to examine agreement between low, medium and high levels of social interaction and low, medium and high levels social networks.
+# 
+# ** Trash
+
+
+# ** <2020-06-20 Sat>
+# 
+# *** TODO [#A] Vraag aan Geeske wat we nou precies met de controle groep willen doen. Waarom precies hebben we dit nodig? Willen we een vergelijking maken tussen wel/niet sociaal? Dan moeten er twee groepen gemaakt worden, maar dat is niet perse het doel van de studie.
+# 
+# *** Intervention
+# 
+# *** Study design
+# 
+# **** TODO [#A] Study design beschrijven
+# - 1 controle, 1 spel concept (samenpuzzelen.offline)
+# - 102 mensen ronselen via DELA
+# - Vraag aan iedereen om hun naasten uit te nodigen met hun te spelen, hoe meer zielen, hoe meer vreugd
+# 
+# **** TODO [#A] vraag toevoegen, speel je graag spelletjes online/ analoog, voorbeelden erbij
+# 
+# **** TODO [#A] vraag toevoegen, MC Ik speel graag spelletjes met anderen:
+# 
+# **** TODO [#A] Toevoegen, vraag: MC Hoe bent u bij ons onderzoek terecht gekomen? 
+# 
+# **** TODO [#A] Beschrijven wanneer welke vragenlijsten hoe worden uitgevraagd.
+# 
+# ** <2020-06-21 Sun>
+# 
+# *** Main study parameters/endpoints
+# 
+# *** Method
+# ** TODO [#A] Teksten op grammatica en goed lopendheid checken (exclusief deze zin)
+# ** DONE [#A] Herschrijf "het spel" naar "het portaal" waar meerdere spellen zijn waar mensen op eenzelfde manier gevolgd kunnen worden.
+# 
+# ** TODO [#A] Kwalitatief interview aan het einde expliciet maken
+# Wat motiveerde u om te spelen?
+# Hoe heeft u het ervaren?
+# 10 veel gespeeld, 10 weinig gespeeld: goh we hebben gezien dat u niet zo veel gebruik heeft gemaakt van de spelletjes? Waarom? Wat hield u tegen? Wat zijn barrieres? Heeft u nog tips voor ons?
+# Hoeveel waardeert u het platform?
+# 
+# ** TODO [#A] validatie vragen
+# 5. Duur/frequentie van spel interactie correleert aan waardering van het contact.
+# 6. Uiteindelijke waardering van platform is hoger als alle interacties gemiddeld ook meer gewaardeerd worden.
+#    1. In-game connections is correlated with the number of real-world connections ($r>0.3$). is geen statement, maar vraag van onderzoek
+# 
+# # 5. Duur/frequentie van spel interactie correleert aan waardering van het contact.
+# # 6. Uiteindelijke waardering van platform is hoger als alle interacties gemiddeld ook meer gewaardeerd worden.
+# #    1. In-game connections is correlated with the number of real-world connections ($r>0.3$). is geen statement, maar vraag van onderzoek
+# # 8. The perception of social satisfaction is higher with social games than with the non-social games.
+# # 9. The quality of life is higher in those with more in-game interactions than with those with less.
+# # 10. Spel-gerelateerde netwerk karakteristieken (no. of nodes and degrees, connectivity, centrality) zijn gecorreleerd met ervaren eenzaamheid (meer eenzaamheid, minder nodes, connectivity)
+# # 11. Spel-gerelateerde netwerk karakteristieken zijn gecorreleerd met netwerkomvang
+# # 12. Het verschil tussen spel-gerelateerde netwerkomvang en niet-spel-gerelateerde netwerkomvang is groter bij ouderen met een kleinere life space dan bij ouderen met een grotere life space
+# # 13. “Centrality” is hoger bij spelers met een klein sociaal netwerk dan bij spelers met een groot sociaal netwerk
+# # 14. Iets met self management ability (SMAS) /nog even naar kijken/
+# 
+# 
+# ** Feasibility
+# 
+# Dit worden dus de vragen voor het feasibility deel:
+# 
+# 1. Als mensen gaan spelen, zien we dan ook een verandering in sociaal netwerk, eenzaamheid? (Kwantitatief)
+# 2. Als mensen wel spelen -> waarom?; Als mensen niet spelen -> waarom? (Kwalitatief)
+# 3. Met wie gaan ouderen spelen? -> Bekenden/onbekenden, leeftijdgenoten/jongeren.
+# 4. Hoe lang duurt het om het gewenste aantal deelnemers te recruteren en welke groep trekken we aan?
+# 5. Zijn deelnemers bereid om de herhaalde vragenlijsten in te vullen? (missende waarden analyseren)
+# 6. Deelnemers 3 maanden volgen.
+# 
+# To do:
+# -Verwerkingsovereenkomst
+# -Informed consent formulier (Rob stuurt voorbeeld)
+# -Proefpersoon informatiebrief
+# -Vragenlijsten omzetten in chatbot
+# -Recrutementplan opstellen (met JP, vrijdag 11.30u)
+# 
+# Morgenvroeg kunnen we bespreken hoe het protocol aangepast moet worden om deze feasibility vragen er in te verwerken.
+
+* Protocol information
+
+** Title
+Measuring social interaction through gaming: a validation study
+
+** Coordinating investigator
+
+- Bas Chatel, MSc
+- dep. Geriatric medicine, Radboudumc Nijmegen
+- bas.chatel@radboudumc.nl
+
+** Principal investigator
+# Format geinspireert door cite:researchProtocol en [[https://cdn.jamanetwork.com/ama/content_public/journal/derm/0/doi190078supp2_prod.pdf?Expires=2147483647&Signature=soK9J4pzz016Ty6dX9RuP4HQxNncUQTTztlBaILt4jQHbd8tSFSVXPY9erVO9IcgwFZsjP~Spj8Fb2rb3gg4867j0V~1EDueYLFANM~rL1HWlpUmyjswUdgYKMyOOH-JeDPZh5aLEKQfKREfCe9HayEjm2kW73FTUyVkuGLUBrMD5UcgN-00YhDB1Ejn5tNOGLbv2HqeIWT9613UMTUfLn5-~6XRm-Sla8j-Nq0ieQm19S4XyRiyn0bTnb5ShgDIUlmroKouFbSpwftso8pN4k8vJn7oFBv43zD7dXTPbANrSh3ljD4LUlBZ9UznGdB9ZQAYN9ucdpf-iudSEi4-fg__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA][dit bestand]] (ik neem aan dat dit marcel is?) cite:trepte12_social_side_gamin,domenech2019anxiety
+- Marcel Olde Rikkert
+- dep. Geriatric medicine, Radboudumc Nijmegen
+- Radboudumc, Nijmegen, The Netherlands
+- +31 24 3616772 (secretary)
+- +31 24 3619214 (direct)
+- marcel.olderikkert@radboudumc.nl
+
+** Number of involved centers (3)
+- Radboudumc
+- DELA
+- Games for Health
+
+** Protocol ID
+MSIG
+
+** Keywords
+Social Interaction, Loneliness, Elderly, Social Games, Social Capital, Network Analysis, Feasibility/Validation study
+
+
+#+LATEX: \clearpage
+* List of abbreviations and relevant definitions
+#+ATTR_LATEX: :align l|l
+| *Abbreviation* | *Definition*                                                                |
+|--------------+---------------------------------------------------------------------------|
+| *SL*           | Social Loneliness                                                         |
+|--------------+---------------------------------------------------------------------------|
+| *EL*           | Emotional Loneliness                                                      |
+|--------------+---------------------------------------------------------------------------|
+| *TOPICS*       | The Older Persons and Informal Caregivers Survey                          |
+|--------------+---------------------------------------------------------------------------|
+| *SN-LASA*      | Social Networks questionnaire from the Longitudinal Aging Study Amsterdam |
+|--------------+---------------------------------------------------------------------------|
+| *LSQ*          | Life Space Questionnaire                                                  |
+|--------------+---------------------------------------------------------------------------|
+| *DJG*          | Dejong Gierveld Loneliness Scale                                          |
+|--------------+---------------------------------------------------------------------------|
+| *SC*           | Social Capital                                                            |
+|--------------+---------------------------------------------------------------------------|
+| *PI*           | Personal Information                                                      |
+|--------------+---------------------------------------------------------------------------|
+| *DRE*          | Digital Research Environment                                              |
+|--------------+---------------------------------------------------------------------------|
+| *WMO*          | Medical Research Involving Human Subjects Act; in Dutch:                  |
+|              | Wet Medisch-wetenschappelijk Onderzoek met Mensen                         |
+
+
+#+LATEX: \clearpage
+* Summary
+
+** Rationale
+
+As declared by the Dutch government and validated by multiple surveys, social isolation among senior citizens (abbreviated as 'seniors') is an increasing problem. It lowers the quality of life and threatens the well-being of a large part of our population. This project connects complexity science theory and social capital theory. It uses both as the starting point for developing, guiding, and evaluating a design thinking innovation of social health games. The overall aim is to use these social health games to decrease loneliness amongst seniors. As a preparatory step for the trial in which we will evaluate the effectiveness of the games, the aims in this study are to validate the measurement of social interaction and examine the feasibility of the gaming portal.
+
+** Objective
+
+The overarching project aims to assess whether e-gaming can become an effective intervention in lessening social loneliness and emotional loneliness in seniors. This protocol's specific objective is to present a feasibility and validity study that addresses the following two aims:
+
+- *Aim 1:* To assess whether gaming-related social interactions in networks of seniors can be validly monitored using time-series of playing behavior?
+
+- *Aim 2:* To get feedback on the feasibility and appreciation of the gaming portal.
+
+** Study population
+
+The study population consists of 100 Dutch-speaking participants aged 65+. These participants are kept as diverse as possible regarding educational level, degree of mobility, marital status, and whether they live independently or in a home. Family and friends of the participants and other people not meeting these inclusion criteria are welcome to use the portal and form a pool of people that the participants can play with. This pool will be tracked within the gaming portal and posed some questions regarding their fellow players and their social capital; they will not be asked to complete questionnaires.
+
+** Intervention
+
+Participants are invited to download and use an app that functions as a portal. The portal provides access to several different games that stimulate social interaction. Participants will be asked to play at least twice a week but may play as often as they like.
+
+** Study design
+
+A validation and feasibility study using prospective observational data supported by qualitative structured interviews and social network analyses.
+
+** Main study parameters
+
+In the validity study, the gaming-related social interaction will be compared against a standardized social network measure. In the feasibility study, the main outcomes are participants' experiences with the games and portal and questionnaire completion rates. 
+
+** Method
+
+Participants will complete questionnaires on both online and offline social networks, loneliness, health, and well-being at baseline and study completion after three months of gameplay. The loneliness questionnaire will be repeated every month. Questions about gaming-related social interactions will be asked at the end of each game session. Concurrent validity will be examined by comparing gaming-related social interaction with the standardized measure of social networks. Construct validity will be assessed by testing four hypotheses on correlations between gaming-related social interaction, loneliness, and enjoyment. Feasibility is evaluated by inviting a random sample of participants who played a lot (n=10) or little (n=10) for telephone interviews to ask about their experiences with the games and portal. Additionally, completion rates of questionnaires and missing data on items will be checked to assess adherence.
+# Participants are interviewed at the beginning of their participation to elucidate their social network using questions from the Longitudinal Aging Study Amsterdam (SN-LASA) and are asked to fill in The Older Persons and Informal Caregivers Survey (TOPICS). Then, there are three in-game moments of assessment. Firstly, participants are prompted to fill in a survey on the first login, reminiscent of a profile page. This questionnaire entails the Life Space Questionnaire (LSQ), the DeJong Gierveld 11 item Loneliness Scale (DJG), and to provide more information regarding Social Capital and themselves. Secondly, before gameplay, they will be prompted to answer questions about the other participant(s) with whom they had not played with before. These questions are adopted from the SN-LASA and are designed to gain information about the relationship between players. Finally, after gameplay, both participants are presented with a short questionnaire about their experience regarding their fellow player(s). Duration of session and gameplay, contact timestamps, and game performance are also stored on a per-game basis.
+
+** Nature and extent of the burden and risks associated with participation, benefit, and group relatedness
+
+The risks for the participants is low. All data will be collected using online surveys and are kept anonymous. At the end of the trial, only some participants will be invited to complete semi-structured telephone interviews. They are then asked to provide information such as their name and phone number. No sensitive questions are asked. This intervention is not associated with any more risk than that of playing popular online games such as wordfeud. Reducing feelings of loneliness (both subjective and objective) could be one of the benefits of participation.
+
+#+LATEX: \clearpage
+* Introduction and rationale
+
+As declared by The Dutch government and validated by multiple surveys, social isolation among senior citizens (abbreviated as 'seniors') is an increasing problem, lowering the quality of life and threatening the well-being of a large part of our population. Moreover, it is a major driver of societal expenses for health care and welfare organizations. Currently, 1 in 4 seniors feels lonely, summing up to more than 1 million seniors with feelings of social isolation, of whom 200,000 are seriously complaining of loneliness cite:ouderenpact,TNONIPOetc. 
+
+This problem warrants social and political action, and urgently asks for interdisciplinary complexity science research because social isolation and the linked subjective loneliness are complex societal problems. They are the net outcome of social network changes during aging, directly depending on multiple factors, such as impairments in hearing, cognition, mobility, the availability of family members and friends, the opportunities for transportation, etc. cite:shiovitz201330,van1990size,litwin2014confidant. Seniors' social networks behave as complex adaptive systems because of the multi-scale interplay of several interacting causal factors and their positive feedback loops. For example, depressed feelings and cognitive decline limit social interactions, causing a lack of positive events, and thereby further lowering mood and cognition over time cite:boulton2015embracing,loscalzo2017network.     
+
+Expected socio-cultural and demographic changes, such as the growing number of single seniors, will have a high impact. Adding further to the problem's complexity is the finding that social isolation, independent from mental health (e.g., depression), is also cross-linked with the immune system, causing lower resistance and resilience for infections and, finally, increased mortality cite:snyder2016social,braithwaite2018complexity. In conclusion, social isolation has an increasing burden on individual and population levels and asks for better understanding and innovative action at micro-, meso- and macro-level. 
+
+This project connects complexity science theory and social capital theory and uses both as the starting point for developing, guiding, and evaluating a design thinking innovation of social health games.
+# 1. In this project's context, the adjective "complex" for the problem of loneliness refers to senior social networks:
+#    1. act as multi-component complex adaptive systems
+#    2. have many (feedback) interactions
+#    3. are at least partly non-linear
+#    4. are history and environment-dependent
+#    5. are of different temporal and spatial scales
+#    Based on this pivotal theoretical notion, we will use three modes of investigation of social behavior by working with complexity science: experimental, computational, and theoretical.
+# 2. We rely on Social Capital Theory (SCT) because it integrates the strengths of psychological and economic consumer/household theories. SC predicts that seniors start using inter-generational games when their social and personal goals can be met in-game.    
+# 3. The design thinking methodology of iterative and cyclic working on innovation, directly in contact with the end-users, will be applied throughout the creative process.     
+
+This scientific study will be based on complexity science methods such as dynamical network analyses, computational modeling of social resilience, and tipping point monitoring. Although it will not be based on the Research Through Design methods, they will be used in the development phase.
+
+As a preparatory step for the trial in which we will evaluate the effectiveness of the games, the aims in this study are to validate the measurement of social interaction and examine the feasibility of the gaming portal.
+# To assess that these aims are achievable, we must validate whether social games can function as tools to measure social interaction. This study will be the first formal exploration of the usability, feasibility, and validity of social health games to monitor social interaction and reduce loneliness in the older population. This study will use a single portal that presents two different games: one that invokes and measures social interaction and a control game that utilizes single-player gameplay. We hypothesize that the social gaming portal will be able to measure social interaction sufficiently (e.g., has a positive correlation with a validated means of measuring social interaction) and that the social game will be played more frequently compared to the control game.
+
+#+LATEX: \clearpage
+* Objectives
+
+# As this is a collaborative study with multiple parties involved, it will contain two different objectives. These objectives are aimed at the validation of the measurement method (i.e., measuring social interaction through gameplay) and the feasibility of this study. Validation is divided into two categories, concurrent validity and construct validity. 
+The objectives are as follows:
+
+** Concurrent validity
+
+- To examine the concurrent validity of social interaction measured with virtual gaming against social interaction measured with the domain-contact method in older adults participating in a social gaming intervention.
+
+** Construct validity
+
+- To examine the degree to which data from the social gaming intervention can be used to validly measure social interaction in older adults. 
+  
+** Feasibility
+
+- To examine participants’ willingness to complete monthly questionnaires on loneliness and social capital by evaluating completion rates.
+- To find an appropriate frequency for assessing loneliness and social capital.
+- To assess the participant’s experiences and identify barriers and enablers to gameplay and use of the portal.
+- To evaluate the recruitment strategy.
+- To gain insight into with whom our participants tend to play with most (i.e., known vs. unknown players, people of similar age vs. younger).
+
+* Study population
+
+** Population (base)
+
+The study population consists of 100 Dutch-speaking participants aged 65+. These participants are kept as diverse as possible regarding educational level, degree of mobility, marital status, and whether they live independently or in a home. Family and friends of the participants and other people not meeting these inclusion criteria are welcome to use the portal and will form a pool of people that the participants can play with. This pool will be tracked within the gaming portal and posed some questions regarding their fellow players and their social capital; they will not be asked to complete questionnaires or partake in interviews outside of the gaming portal.
+
+Participants are recruited from existing networks associated with the three parties involved, as well as through ads in the local newspaper. Existing networks being: Facebook and other social networking platforms, Netwerk 100, healthcare institutions, home care providers, advertisements or articles in local newspapers, libraries, etc.
+
+** Sample size calculation
+
+This study is mainly focused on determining whether social interaction can be measured via gaming. Concurrent validity is assessed by correlating the method employed by the game to the validated questionnaire, as provided by the SN-LASA study[fn:1]. To compute the needed sample size, we made use of a commonly used correlation sample size calculation cite:hulley2013designing as a correlation between two methods is applied. The sample size calculation used the following parameters:
+
+$$\alpha=0.05,\ \beta=0.2,\ r=0.3$$
+
+Parameter $r$, the expected correlation coefficient, is set to $0.3$. It is the lowest expected correlation for the hypotheses that will test the construct validity. I.e., we expect a weak but statistically significant correlation between social interaction and loneliness.
+
+The calculation yields a total of *85 participants* needed for this study. To account for participant dropout, 20% was added on top of the 85 participants required, bringing the total of participants up to 102. We believe that this number is also feasible, practically speaking. The 20% dropout rate is based on another comparable study in a similar population (cite:konstantinidis2014design).
+
+* Intervention
+
+Participants are invited to download and use an app that functions as a portal. The portal provides access to several different games that stimulate social interaction. These games are centered around both asynchronous communication (i.e., games that connect players but don't require simultaneous play) and synchronous gameplay (i.e., games that connect players and require simultaneous play). For example, one game challenges players to share photos of items that start with a particular letter. The following player shares a photo beginning with the last letter of the previous player's item, and so on. 
+
+Modes of communication will be; voice message, texting, and sending photos and videos. All games will be available to play from the beginning. Participants will be advised to play at least twice a week but may play as often as they like. This advice ensures that participants give the game a try, without making it compulsory as we are interested in the natural behavior of participants. This gaming portal is, in itself, both the measuring method and the intervention.
+# Participants are required to download an app that functions as a portal providing two different games: one that invokes and measures social interaction and a control game that utilizes single-player gameplay. Both games will be free to play from the beginning, though the advice is to play at least two times per week. This advice ensures that participants give the game a chance, while it is non-binding as the natural behavior is of interest. The control game is added to provide extra diversity in the gaming portal to entice participants into playing more. This gaming portal is, in itself, both the measuring method as the intervention.
+
+* Study design
+
+This study is a prospective observational study supported by qualitative structured interviews and social network analyses.
+
+** Outcome measures and assessments
+
+*** Questionnaires
+
+This study utilizes several different questionnaires to measure different constructs. Here we provide an overview and their respective abbreviations that will henceforth be used.
+
+#+NAME: tab:measures
+#+CAPTION: Questionnaires used in this study
+#+ATTR_LATEX: :align p{5cm}|p{2.5cm}|p{2.5cm}|p{4cm} :placement [h]
+| *Questionnaire*                                                    | *Construct*                              | *Abbreviation* | *Reference*                    |
+| <50>                                                               | <20>                                     |                |                                |
+|--------------------------------------------------------------------+------------------------------------------+----------------+--------------------------------|
+| De Jong Gierveld Loneliness Scale.                                | Loneliness                               | DJG            | cite:de1985development         |
+|--------------------------------------------------------------------+------------------------------------------+----------------+--------------------------------|
+| Life Space Questionnaire.                                          | Life Space                               | LSQ            | citep:stalvey1999life          |
+|--------------------------------------------------------------------+------------------------------------------+----------------+--------------------------------|
+| Social network method from the Longitudinal Aging Study Amsterdam. | Social Network                           | SN-LASA        | cite:van1995delineation [fn:1] |
+|--------------------------------------------------------------------+------------------------------------------+----------------+--------------------------------|
+| Social Capital specific questions.                                 | Social Capital                           | SC             | citep:gray_2009                |
+|--------------------------------------------------------------------+------------------------------------------+----------------+--------------------------------|
+| The Older Persons and Informal Caregivers Survey.                  | Physical and mental health and well-being | TOPICS         | citep:lutomski2013older        |
+
+*** Timing of data collection
+
+There are two types of assessments in this study: information gathered within the gaming portal, and information gathered using semi-structured telephone interviews. This section will elaborate on both types and their respective timing (see figure ref:fig:timeline). 
+
+At baseline, participants will be interviewed regarding their entire social network through the SN-LASA method, and their physical and mental health and well-being will be inquired through the TOPICS-SF. At the end of the study, well-being will again be asked through the TOPICS questionnaire. Furthermore, the SN-LASA method will be applied again for the whole network and the gaming-related network, followed by qualitative questions regarding participants' experiences using the gaming portal. 
+
+During the study, the game portal will be opened for participants to play games. Information gathering within the social games brings about three different timings of assessment within the portal. First, on the first login, the DJG and LSQ will be presented with more questions regarding personal information (PI). The DJG will henceforth be repeated monthly. Second, whenever two players that have not played together before are matched, a questionnaire is presented asking about their relationship. Third, after gameplay, automatically generated data is saved, and questions regarding the participants' perception of their perception of social interaction are displayed. The whole study will take three months. The questions posed in the second and third timing will also be asked to the pool of players consisting of friends, family, and others interested in playing.
+
+#+NAME: fig:timeline
+#+CAPTION: Timeline of this study regarding the timing of questionnaires.
+#+ATTR_LATEX: :width 1\textwidth :placement [t!]
+[[./timeline.png]]
+
+*** Data collection
+**** *Beginning of the trial*
+
+Outside of the gaming portal, participants within the main group are asked to answer two questionnaires at the start of trial participation. These questionnaires are TOPICS and SN-LASA. The pool consisting of friends, family, and others, will not be invited for these interviews outside of the gaming portal. 
+
+
+_Constructs Measured_:
+
+1. Social networks, by the SN-LASA.
+2. Physical and mental health and well-being by the TOPICS.
+
+**** *Information gathered in the gaming portal*
+
+***** First and last login in the game
+
+
+At the first and last login of the trial, the game prompts the participant to answer questions that set up the account and fill in the requisite additional information consisting of further questionnaires. The questions posed can be found in appendix ref:sec:per_user. The participant will be given three questionnaires combined similar to setting up a profile on any social networking platform. Questionnaires posed are the LSQ, DJG, and part of the SN-LASA, together with questions related to the participant's situation. However, this profile is not entirely visible to others as it contains information of a personal nature.
+
+
+_Constructs measured_:
+
+1. Life Space, by the LSQ.
+2. Loneliness, by the DJG.
+3. Social networks, by part of SN-LASA.
+
+
+***** Pre-gameplay
+
+
+In each session, whenever a participant engages with others in a game, there are two possibilities. The participants have played together before, in which case gameplay is as usual. Alternatively, participants have not encountered one another within the gaming portal. In which case, both are asked to provide additional information on the nature of their relationship. In appendix ref:sec:per_new, we depict these questions. Each user is posed with ten multiple-choice questions and three questions that require integer input. These questions are either directly taken from the SN-LASA or SC.
+
+
+_Constructs measured_:
+
+1. Social networks, by part of SN-LASA.
+2. Social capital, by SC.
+
+
+***** Post-gameplay
+
+
+After each session, all participants are asked questions regarding their perception of social interaction with the other participant(s). Furthermore, the information generated automatically through gameplay is stored. In appendix ref:sec:per_game, the variables are shown that correspond with the session. Three multiple-choice questions are posed regarding their experience towards the other player, while the rest of the data in the table is automatically generated. Upon an asynchronous game design, timestamps of each communicative transaction are saved. Depending on which game is being played, the final scores are stored. Furthermore, the session's duration is stored (i.e., from game initiation to one user leaving the game), and the length of the game itself is being logged. This difference illustrates the time being used to communicate after the game has been terminated (e.g., participants can choose to stay in the session to keep talking even when the game is finished).
+
+
+_Constructs measured_:
+
+1. Social networks, by part of SN-LASA.
+
+**** *End of trial*
+
+After the trial, all members of the main group are asked to answer the SN-LASA again in an interview over the phone. Some members of the main group will be selectively invited to participate in structured interviews over the phone about their experiences with the game. These interviews are regarding some of the feasibility aspects of this study, shown in appendix ref:sec:kwantint. All members of the main group are asked to answer the SN-LASA again, employing an interview.
+
+
+_Constructs Measured_:
+
+1. Social networks, by the SN-LASA.
+2. Well-being by the TOPICS.
+
+
+# *** Feasibility study
+# 
+# - How was the communication during gameplay perceived?
+#   - What makes this moment of social interaction something that is perceived as _valuable_?
+#   - What is the impact on feelings of loneliness or the amount of social contacts?
+# 
+# Each week a questionnaire is presented to obtain information regarding feasibility. The following data will be obtained:
+# 
+# 
+# *Qualitative questions:*
+#   - How do older people perceive the games?
+#   - Do push notifications actually help play more or are they perceived to be a nuisance?
+#     - How many push notifications is to much?
+#   - Would the player be willing to pay for such a game?
+#   - What would be a good frequency for questionnaires?
+# 
+# 
+# *Quantitative questions:*
+#   - Usability, applicability and appreciation
+#     - Measured by use of Likert Scales
+# 
+# *** Other measurements
+# 
+# Each week, a questionnaire is presented through a push-notification regarding to subjective experiences that are designed to measure or obtain the following information:
+# 
+# - Did the player already know the other person in real life?
+#   - What kind of relation is it (parental, neighbourly, etc.)?
+#   - How well do the players know one another?
+#   - Is the relationship a positive one?
+# 
+# Further information of interest that will be obtained on a per-game basis:
+# 
+# - Game performance and results.
+#   - Depending on game design, this could be used to increase game difficulty depending on performance such that gaming itself would be more engaging, keeping the game from being regarded as "boring" or "easy".
+# - Changes in reaction speed, insights, qualities
+# 
+# 
+# Further information that is needed asked to the participants:
+# 
+# - Age [fn:1].
+# - TOPICS (*TODO uitwerken*)
+#
+
+* Main study parameters/endpoints
+
+In the validity study, the gaming-related social interaction will be compared against a standardized measure of the social network. In the feasibility study, the main outcomes are participants’ experiences with the games and portal and questionnaire completion rates.
+
+* Method
+
+** Concurrent validity
+
+Concurrent validity is demonstrated when a test has a high correlation with another, previously validated, measure. It is the evidence to which we defend the use of our method for predicting outcomes of the construct being social interaction. Social interaction is measured as a function of social network measures (e.g., connectivity) and answers to the questions posed in appendix tables ref:tab:per_new_user and ref:tab:per_game (noted with the tag SI in the "USED FOR" column). Social networks are usually measured for the overall network, but it will be also be assessed for the gaming-related network to approximate the gaming-related conditions. In our case, we shall correlate the participants' social gaming network, unveiled by employing the SN-LASA study method, to their social gaming network generated by the interactions within the gaming portal.
+
+** Construct validity
+
+Construct validity can be viewed as the degree to which a test measures what it claims to be measuring. To assume construct validity, we will make use of a set of validation statements unto which our method will be tested. The rule of thumb is that at least $\approx 75\%$ of these hypotheses must be correct.
+
+1. Social loneliness (calculated from DJG) is correlated with the number of social interactions ($r>0.3$).
+2. Correlation between emotional loneliness and the number of social interactions is less strong, then the correlation between social loneliness and the number of social interactions.
+3. "Connectivity" is higher between those with strong ties than those with weak ties[fn:2].
+4. People who enjoy playing games with others will play for a longer duration in games that invoke social interaction than those that do not.
+
+** Feasibility study
+:PROPERTIES:
+:ID:       F5205AD9-0EE9-4C6F-8FF7-1488B2179DED
+:END:
+
+This study also consists of assessing the feasibility of the more extensive comprehensive study. It is designed in such a way that we can obtain answers to the following aims:
+
+- To examine participants’ willingness to complete monthly questionnaires on loneliness and social capital by evaluating completion rates.
+- To find an appropriate frequency for assessing loneliness and social capital.
+- To assess the participant’s experiences and identify barriers and enablers to gameplay and use of the portal.
+- To evaluate the recruitment strategy.
+- To gain insight into with whom our participants tend to play with most (i.e., known vs. unknown players, people of similar age vs. younger).
+
+** Data management and collection
+label:sec_dat_col
+
+Participant data is collected anonymously. Only participants selected to participate in the semi-structured interviews after the study will be approached within the gaming portal to provide their name and phone number. This personal data is stored in a separate encrypted database and removed one year after research finalization. All collected data will be streamed from gameplay at each gaming session to an ISO 9001, 27001, and NEN 7510 certified database. From this database, a weekly data transfer will occur to a Radboudumc database in the Digital Research Environment (DRE), where all data are exclusively accessible and processed by investigators in this project and is saved within the Netherlands. Data will be stored for a total of 15 years after the publication of the related paper. The gaming portal, together with data gathering, will be disabled after the completion of data collection. 
+
+** Analysis
+
+The construct validity hypotheses are tested using Pearson correlation (H1, H2) or T-tests (H3, H4) or their non-parametric equivalent if outcomes are not normally distributed. Concurrent validity will be analyzed by estimating the correlation between gaming-related social networks, generated by interactions within the gaming portal, and gaming-related social networks (SN-LASA). The study's feasibility questions will be answered using descriptive statistics to describe the sample characteristics and questionnaire completion rates. We will also examine the variation in loneliness over time to inform the preferred frequency of completing the questionnaire. 
+# Hypotheses regarding construct validity are tested using correlation or regression models, depending on the outcome. The SN-LASA network characteristics will be correlated to the features of the social gaming network using correlation or regression models, depending on the result of measurements. The study's feasibility questions will be answered by descriptive statistics and the number of missing values to see whether participants are willing to complete the repeated questionnaires. We will also test whether there is a difference in loneliness about the various measurements (repeated measures ANOVA if the assumptions are met).
+
+#+LATEX: \clearpage
+* Appendix
+
+**** Per-user data
+:PROPERTIES:
+:CUSTOM_ID: sec:per_user
+:END:
+
+#+NAME: tab:per_user
+#+CAPTION: Variables enquired at first login
+#+ATTR_LATEX: :environment longtable :align |p{3.5cm}|p{1cm}|p{10cm}|
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *NAME*                         | *USED FOR* | *DESCRIPTION*                                                                                                                                                                                                                                                                                |
+| <10>                           | <1>        | <150>                                                                                                                                                                                                                                                                                        |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_ID                           | PI         | User ID. 6 random integer numbers that are unique ID's referring to a single user.                                                                                                                                                                                                           |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_BIRTHYEAR                    | PI         | OQ (date input in format -  MM-YYYY): User's year of birth. The age of the user as an integer value.                                                                                                                                                                                         |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_MOB_1                        | MO         | MC question: Ben je de afgelopen 3 dagen in andere kamers van je huis geweest naast de kamer waar je slaapt?                                                                                                                                                                                 |
+|                                |            | 1. Nee. 2. Ik weet het niet. 3. Ja.                                                                                                                                                                                                                                                          |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_MOB_2                        | MO         | MC question: Ben je de afgelopen 3 dagen in een gebied direct buiten je huis geweest, zoals je veranda, terras of patio, gang van een flatgebouw of garage?                                                                                                                                  |
+|                                |            | 1. Nee. 2. Ik weet het niet. 3. Ja.                                                                                                                                                                                                                                                          |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_MOB_3                        | MO         | MC question: Bent u de afgelopen 3 dagen in een gebied buiten uw huis geweest, zoals een tuin, binnenplaats, oprit of parkeerplaats?                                                                                                                                                         |
+|                                |            | 1. Nee. 2. Ik weet het niet. 3. Ja.                                                                                                                                                                                                                                                          |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_MOB_4                        | MO         | MC question: Bent u de afgelopen 3 dagen op plaatsen in uw directe omgeving geweest, maar buiten uw eigen eigendom of appartementengebouw?                                                                                                                                                   |
+|                                |            | 1. Nee. 2. Ik weet het niet. 3. Ja.                                                                                                                                                                                                                                                          |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_MOB_5                        | MO         | MC question: Bent u de afgelopen 3 dagen op plaatsen buiten uw directe buurt geweest, maar binnen uw stad of gemeente?                                                                                                                                                                       |
+|                                |            | 1. Nee. 2. Ik weet het niet. 3. Ja.                                                                                                                                                                                                                                                          |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_MOB_6                        | MO         | MC question: Bent u de afgelopen 3 dagen op plaatsen buiten uw directe stad of gemeenschap geweest?                                                                                                                                                                                          |
+|                                |            | 1. Nee. 2. Ik weet het niet. 3. Ja.                                                                                                                                                                                                                                                          |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_MOB_7                        | MO         | MC question: Bent u de afgelopen 3 dagen op plaatsen buiten uw land geweest?                                                                                                                                                                                                                 |
+|                                |            | 1. Nee. 2. Ik weet het niet. 3. Ja.                                                                                                                                                                                                                                                          |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_MOB_8                        | MO         | MC question: Ben je de afgelopen 3 dagen op plaatsen buiten Europa geweest?                                                                                                                                                                                                                  |
+|                                |            | 1. Nee. 2. Ik weet het niet. 3. Ja.                                                                                                                                                                                                                                                          |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_DJG_1                        | LO         | MC question: Er is altijd wel iemand in mijn omgeving bij wie ik met mijn dagelijkse probleempjes terecht kan:                                                                                                                                                                               |
+|                                |            | 1. Nee. 2. Min of meer. 3. Ja.                                                                                                                                                                                                                                                               |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_DJG_2                        | LO         | MC question: Ik mis een echt goede vriend of vriendin:                                                                                                                                                                                                                                       |
+|                                |            | 1. Nee. 2. Min of meer. 3. Ja.                                                                                                                                                                                                                                                               |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_DJG_3                        | LO         | MC question: Ik ervaar een leegte om me heen:                                                                                                                                                                                                                                                |
+|                                |            | 1. Nee. 2. Min of meer. 3. Ja.                                                                                                                                                                                                                                                               |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_DJG_4                        | LO         | MC question: Er zijn genoeg mensen op wie ik in geval van narigheid kan terugvallen:                                                                                                                                                                                                         |
+|                                |            | 1. Nee. 2. Min of meer. 3. Ja.                                                                                                                                                                                                                                                               |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_DJG_5                        | LO         | MC question: Ik mis gezelligheid om me heen:                                                                                                                                                                                                                                                 |
+|                                |            | 1. Nee. 2. Min of meer. 3. Ja.                                                                                                                                                                                                                                                               |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_DJG_6                        | LO         | MC question: Ik vind mijn kring van kennissen te beperkt:                                                                                                                                                                                                                                    |
+|                                |            | 1. Nee. 2. Min of meer. 3. Ja.                                                                                                                                                                                                                                                               |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_DJG_7                        | LO         | MC question: Ik heb veel mensen op wie ik volledig kan vertrouwen:                                                                                                                                                                                                                           |
+|                                |            | 1. Nee. 2. Min of meer. 3. Ja.                                                                                                                                                                                                                                                               |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_DJG_8                        | LO         | MC question: Er zijn voldoende mensen met wie ik me nauw verbonden voel:                                                                                                                                                                                                                     |
+|                                |            | 1. Nee. 2. Min of meer. 3. Ja.                                                                                                                                                                                                                                                               |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_DJG_9                        | LO         | MC question: Ik mis mensen om me heen:                                                                                                                                                                                                                                                       |
+|                                |            | 1. Nee. 2. Min of meer. 3. Ja.                                                                                                                                                                                                                                                               |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_DJG_10                       | LO         | MC question: Vaak voel ik me in de steek gelaten:                                                                                                                                                                                                                                            |
+|                                |            | 1. Nee. 2. Min of meer. 3. Ja.                                                                                                                                                                                                                                                               |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_DJG_11                       | LO         | MC question: Wanneer ik daar behoefte aan heb, kan ik altijd bij vrienden terecht:                                                                                                                                                                                                           |
+|                                |            | 1. Nee. 2. Min of meer. 3. Ja.                                                                                                                                                                                                                                                               |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_G_PREF1                      | PI         | MC question: Ik speel graag spelletjes met anderen (denk aan bijvoorbeeld wordfeud, ganzenbord, kezen, etc.):                                                                                                                                                                                |
+|                                |            | 1. Nee. 2. Min of meer. 3. Ja.                                                                                                                                                                                                                                                               |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_G_PREF2                      | PI         | MC question: Als ik spelletjes speel, vind ik dat ook leuk om op de computer te doen:                                                                                                                                                                                                        |
+|                                |            | 1. Nee. 2. Min of meer. 3. Ja.                                                                                                                                                                                                                                                               |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_EMPLOY                       | PI         | MC question: Wat is uw werk status?                                                                                                                                                                                                                                                          |
+|                                |            | 1. Ik werk full-time. 2. Ik werk part-time. 3. Ik ben arbeidsongeschikt. 4. Ik ben werkeloos. 5. Ik ben met pensioen.                                                                                                                                                                        |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_PARTNER_STAT                 | PI, SC     | MC question: Wat is uw burgerlijke staat?                                                                                                                                                                                                                                                    |
+|                                |            | 1. Alleenstaand, nooit getrouwd. 2. Gehuwd of partnerschap. 3. Weduwnaar. 4. Gescheiden.                                                                                                                                                                                                     |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_HOUSEHOLD                    | SC         | OQ (integer input): Hoeveel mensen wonen er momenteel in uw huishouden?                                                                                                                                                                                                                      |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_HOUSEHOLD_CHILD              | SC         | OQ (integer input): If previous question > 1: Hoeveel van deze mensen zijn 18 jaar of jonger?                                                                                                                                                                                                |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_EDUCATION                    | PI         | MC question: Wat is de hoogste opleiding die u heeft afgemaakt?                                                                                                                                                                                                                              |
+|                                |            | 1. Minder dan 6 klassen lagere school. 2. 6 klassen lagere school. 3. Meer dan lagere school / basisschool zonder verder afgesloten opleiding. 4. Mulo / mms / mavo / middelbaar beroepsonderwijs. 5. Hbs / gymnasium / atheneum. 6. Universiteit / hogeronderwijs.                          |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_LIVING                       | PI         | MC question: Hoe is uw woonsituatie momenteel?                                                                                                                                                                                                                                               |
+|                                |            | 1. Onafhankelijk, alleen. 2. Onafhankelijk, met anderen (partner, kinderen, etc.). 3. Zorginstelling (verpleeghuis / woonzorgcentrum). 4. Anders.                                                                                                                                            |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_TRIAL_C                      | PI         | MC question: Hoe bent u bij ons onderzoek terecht gekomen?                                                                                                                                                                                                                                   |
+|                                |            | 1. Een advertentie of artikel. 2. Facebook of andere sociale media. 3. Een zorginstelling. 4. Via samenspelen.online. 5. Via een kennis. 6. Anders.                                                                                                                                          |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_GENDER                       | PI         | MC question: Bent u man of vrouw?                                                                                                                                                                                                                                                            |
+|                                |            | 1. Man. 2. Vrouw. 3. Anders.                                                                                                                                                                                                                                                                 |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *Explanation of abbreviations* |            | PI: Personal Information, SC: For measure of social capital, MO: Mobility measure based on the Life Space Questionnaire cite:stalvey1999life, MC: Multiple Choice question, OQ: Open Question, LO: DeJong Gierveld 6 item Loneliness Scale, EL: Emotional Loneliness, SL: Social Loneliness. |
+|--------------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+ 
+
+
+**** Data per new other player
+:PROPERTIES:
+:CUSTOM_ID: sec:per_new
+:END:
+
+#+NAME: tab:per_new_user
+#+CAPTION: Variables measured whenever the user is playing with someone new for the first time. The questions of this table represent a row in a database, and each participant has its own entry per session.
+#+ATTR_LATEX: :environment longtable :align |p{3.5cm}|p{1cm}|p{10cm}|
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *NAME*                         | *USED FOR*  | *QUESTION*                                                                                                                                                                                                                                            |
+| <1>                            | <7>         | <150>                                                                                                                                                                                                                                                 |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_ID                           | PI          | User ID. 6 random integer numbers that are unique ID's referring to a single user.                                                                                                                                                                    |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| OTHER_ID                       | PI          | User ID of the other user.                                                                                                                                                                                                                            |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DATE                           | AC          | Entry date of this questionnaire. Date in format DD-MM-YYYY H:M.                                                                                                                                                                                      |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_OTHER                        | SIL, SI     | MC question: Hoe kent u deze persoon?                                                                                                                                                                                                                 |
+|                                |             | 1. Huisgenoot of partner. 2. Kind of partner van mijn kind. 3. Kleinkind. 4. Ander familielid. 5. Buurtgenoot. 6. Bekend van werk / school / studie. 7. Lid van dezelfde organisatie. 8. Overige. 9. Ik ken deze persoon niet.                        |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_FAMILIAR                     | SIL, SC, SI | MC question [fn:3]: Ik ken deze persoon erg goed:                                                                                                                                                                                                     |
+|                                |             | 1. Zeer mee oneens. 2. Oneens. 3. Neutraal. 4. Eens. 5. Zeer mee eens.                                                                                                                                                                                |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_FREQ                         | SIL, SI     | MC question [fn:3]: Hoe vaak bent u in contact met deze persoon?                                                                                                                                                                                      |
+|                                |             | 1. Nooit. 2. Eens per jaar of minder. 3. Een paar keer per jaar. 4. Eens per maand. 5. Eens per twee weken. 6. Eens per week. 7. Een paar keer per week. 8. Elke dag.                                                                                 |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_CONF                         | SIL, SC, SI | MC question [fn:3]: Hoe vaak gebeurde het in het afgelopen jaar dat u over uw persoonlijke belevenissen en gevoelens aan deze persoon heeft verteld?                                                                                                  |
+|                                |             | 1. Nooit. 2. Zelden. 3. Soms. 4. Vaak.                                                                                                                                                                                                                |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_IMP                          | SIL, SC, SI | MC question [fn:3]: Hoe belangrijk is deze persoon voor u?                                                                                                                                                                                            |
+|                                |             | 1. Helemaal niet belangrijk. 2. Niet erg belangrijk. 3. Redelijk belangrijk. 4. Zeer belangrijk. 5. Uitermate belangrijk.                                                                                                                             |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_SUPP                         | SIL, SC, SI | MC question [fn:3]: Ik voel mij erg gesteund door deze persoon:                                                                                                                                                                                       |
+|                                |             | 1. Zeer mee oneens. 2. Oneens. 3. Neutraal. 4. Eens. 5. Zeer mee eens.                                                                                                                                                                                |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_SELF                         | SC          | MC question [fn:3]: Het voelt alsof ik totaal mijzelf kan zijn bij deze persoon:                                                                                                                                                                      |
+|                                |             | 1. Zeer mee oneens. 2. Oneens. 3. Neutraal. 4. Eens. 5. Zeer mee eens.                                                                                                                                                                                |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_COMFORT                      | SC          | MC question [fn:3]: Het voelt alsof ik echt op deze persoon kan rekenen om mij te troosten als ik van streek ben:                                                                                                                                     |
+|                                |             | 1. Zeer mee oneens. 2. Oneens. 3. Neutraal. 4. Eens. 5. Zeer mee eens.                                                                                                                                                                                |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_LISTEN                       | SC          | MC question [fn:3]: Het voelt alsof ik echt op deze persoon kan rekenen om naar mij te luisteren als ik moet praten met iemand:                                                                                                                       |
+|                                |             | 1. Zeer mee oneens. 2. Oneens. 3. Neutraal. 4. Eens. 5. Zeer mee eens.                                                                                                                                                                                |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_CRISIS                       | SC          | MC question [fn:3]: Het voelt alsof ik echt op deze persoon kan rekenen als ik in een crisis zit:                                                                                                                                                     |
+|                                |             | 1. Zeer mee oneens. 2. Oneens. 3. Neutraal. 4. Eens. 5. Zeer mee eens.                                                                                                                                                                                |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_QUAR                         | SIL, SI     | MC question [fn:3]: Hoe vaak kwam het het afgelopen jaar voor dat u ruzie maakte met deze persoon?                                                                                                                                                    |
+|                                |             | 1. Nooit. 2. Zelden. 3. Soms. 4. Vaak                                                                                                                                                                                                                 |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_TRAV                         | SIL, SI     | OQ (tuple of integers (hours, minutes)) [fn:3]: Hoe lang moet u reizen voordat u bij de andere persoon bent, op de manier zoals u meestal reist?                                                                                                      |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_YEAR                         | SIL, SI     | OQ (integer input) [fn:3]: Hoe veel jaar kent u deze persoon?                                                                                                                                                                                         |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *Explanation of abbreviations* |             | SI: For measure of Social Interaction, SC: For measure of social capital, PI: Personal Information, AC: Accounting variable, SIL: Needed for measuring social interaction as taken from the SN-LASA, MC: Multiple Choice question, OQ: Open question. |
+|                                |             |                                                                                                                                                                                                                                                       |
+|--------------------------------+-------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+
+**** Data generated per game
+:PROPERTIES:
+:CUSTOM_ID: sec:per_game
+:END:
+
+#+NAME: tab:per_game
+#+CAPTION: Variables measured on a per-game basis.
+#+ATTR_LATEX: :environment longtable :align |p{3.5cm}|p{1cm}|p{10cm}| 
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *NAME*                         | *USED FOR* | *DESCRIPTION*                                                                                                                                                                                                                                 |
+|                                |            | <150>                                                                                                                                                                                                                                         |
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DATE                           | AC         | Date of contact initiation. Date in format DD-MM-YYYY H:M.                                                                                                                                                                                    |
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ASYNC_CONTACT                  | SIG        | List of contact moment timestamps. In the case of asynchronous communication platform enter a tuple of USER_ID of user sending message and timestamp in the same format as DATE.                                                              |
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_ID                           | PI         | User ID. Tuple of two 6 random integer numbers that are unique ID's referring to a single user. The first ID representing the one that initiated the play request. If the request has not been accepted, only DATE and USER_ID is filled.     |
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GAME_ID                        | SIG        | Game ID. Integer number between [0,n] where n in the total number of games ($n=5$ for this validation study). Integer is corresponding to current game being played.                                                                          |
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| SESSION_DUR                    | SIG        | Session duration in seconds. From initiation where both players are in the same game session until one of them leaves.                                                                                                                        |
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GP_DUR                         | SIG        | Game Performance, duration of game. Time (in seconds) it takes  to finish the game. (/NOTE/: this is different then SESSION_DUR as participants may want to keep talking before entering a new game.                                          |
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GP_SCORE                       | SIG        | Game Performance, score of both players. This is a tuple with two floating point numbers. Person that initialized the game is represented first.                                                                                              |
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_EXP                          | SIL, SI    | MC question: Hoe was uw ervaring met het spelen met deze persoon?                                                                                                                                                                             |
+|                                |            | 1: Erg negatief. 2: Negatief. 3: Neutraal. 4: Positief. 5: Erg positief.                                                                                                                                                  |
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_COMM                         | SIL, SI    | MC question: Hoe goed kon u praten met deze persoon?                                                                                                                                                                     |
+|                                |            | 1. Erg slecht. 2. Slecht. 3. Neutraal. 4. Goed. 5. Erg goed.                                                                                                                     |
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| C_RET                          | SIL, SI    | MC question: Hoe waarschijnlijk is het dat u weer met deze persoon zou willen spelen?                                                                                                                                                         |
+|                                |            | 1. Zeer onwaarschijnlijk. 2. Waarschijnlijk niet. 3. Misschien. 4. Waarschijnlijk. 5. Heel erg waarschijnlijk.                                                                                                                                |
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *Explanation of abbreviations* |            | SI: For measure of Social Interaction, AC: Accounting variable, SIG: Social interaction specific for gaming session, SIL: Needed for measuring social interaction as taken from the SN-LASA, MC: Multiple Choice question, OQ: Open question. |
+|--------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+
+**** Qualitative questionnaire after trial
+:PROPERTIES:
+:CUSTOM_ID: sec:kwantint
+:END:
+
+#+NAME: tab:quant_quest
+#+CAPTION: Qualitative questions asked after trial participation for a subset of the main group.
+#+ATTR_LATEX: :environment longtable :align |p{2cm}|p{2cm}|p{10.5cm}|
+|--------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *NAME* | *USED FOR* | *DESCRIPTION*                                                                                                                                                  |
+|--------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| U_ID   | PI         | User ID. 6 random integer numbers that are unique ID's referring to a single user.                                                                             |
+|--------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Q_MOT  | PI         | OQ (string input): Wat motiveerde u om te spelen?                                                                                                              |
+|--------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Q_EXP  | PI         | OQ (string input): Hoe heeft u het spelen in het spelportaal ervaren?                                                                                          |
+|--------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Q_BAR  | PI         | OQ (string input): We hebben gezien dat u niet zoveel gebruik heeft gemaakt van de spelletjes. Mag ik vragen waarom? Wat hield u tegen? Wat zijn de barrieres? |
+|--------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Q_TIP  | PI         | OQ (string input): Heeft u misschien nog tips voor ons?                                                                                                        |
+|--------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Q_PLA  | PI         | OQ (string input): Hoeveel waardeert u het spel platform? Verliep alles soepel?                                                                             |
+|--------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+#+LATEX: \clearpage
+
+bibliographystyle:unsrtnat
+bibliography:~/Dropbox/bibliography/references.bib
+
+* Footnotes
+
+[fn:1] The Longitudinal Aging StudyAmsterdam, a program conducted at VU University Amsterdam and largely funded by theMinistry of Health, Welfare and Sports, Directorate of Long-Term Care.Address correspondence to Brigitte A. Bloem and Theo G. van Tilburg, Departmentof Sociology, VU University Amsterdam, De Boelelaan 1081c, 1081 HV Amsterdam, TheNetherlands. E-mail: b.a.bloem@vu.nl and t.g.van.tilburg@vu.nl.
+
+[fn:2] The strength of relationships between two individuals is the sum of the Likert scores from questions regarding the following: feelings of trust, feelings of familiarity, confidentiality, and support.
+
+[fn:3] This question only needs to be posed when CONTACT_OTHER is not option 9: I don't know this person yet.
+
+[fn:4] For each game we know the type of communication (i.e. free communication over chat of video call, restricted communication through emoji's or just gameplay without interplayer communication). Also, does the game revolve around cooperation, competition or simultaneous playing without necessary interaction. And lastly, if the game does invoke interaction by design, how much interaction is needed?
+
+[fn:5] Needed to measure social interaction (primary objective).

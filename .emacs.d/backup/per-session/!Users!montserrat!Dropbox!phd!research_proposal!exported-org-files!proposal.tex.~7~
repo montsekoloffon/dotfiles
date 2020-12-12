@@ -1,0 +1,147 @@
+% Created 2020-11-01 Sun 10:25
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Montserrat Koloffon Rosas}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Montserrat Koloffon Rosas},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.3)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Preparation}
+\label{sec:org1ec53d6}
+\subsection{Research Question}
+\label{sec:orgef14f4f}
+\begin{itemize}
+\item Make sure that the worth of the research question is self-evident.
+\item Argue confidently the importance and significance of this question.
+\end{itemize}
+\subsection{Methods}
+\label{sec:orgc7aeee8}
+\begin{itemize}
+\item Ensure that the methods:
+\begin{enumerate}
+\item are clearly articulated
+\item are logical
+\item take into consideration the potential hurdles to effective data collection and analysis.
+\item are ethical
+\item are practical/doable
+\end{enumerate}
+\end{itemize}
+\subsection{Demonstrate the merits of the researcher}
+\label{sec:orgea8cfff}
+\begin{itemize}
+\item \texttt{Luckily I am in a possition where my assessors know me and have a feel for what I am capable of, however, it still needs to pass through the eyes of the Conacyt. The way to show my ability is only through the research proposal, so ensure:}
+\begin{enumerate}
+\item A strong short literature review
+\item A strong argument for the methodological case
+\item High quality writting throughout the proposal
+\end{enumerate}
+\end{itemize}
+\subsection{The Idea}
+\label{sec:org2950678}
+\begin{itemize}
+\item \texttt{My idea is to reassess the topic of international regime effectiveness through the lens of complexity science to gain a clearer understanding of the drivers of effectiveness.}
+\end{itemize}
+\subsection{Include in the proposal}
+\label{sec:orgc33902c}
+\subsubsection{What is the context of your study?}
+\label{sec:org6a11b55}
+\begin{itemize}
+\item Academics \& practitioners have struggled to pinpoint the international regime effectiveness drivers.
+\end{itemize}
+\subsubsection{What have other researchers found?}
+\label{sec:orge6908d7}
+\begin{itemize}
+\item Quote the most important parts of my thesis' literature review
+\end{itemize}
+\subsubsection{Where do your answers lie?}
+\label{sec:orgd3b44b4}
+\begin{itemize}
+\item In mapping and clearly understanding the international regimes' system.
+\end{itemize}
+\subsubsection{What are your proposed methods?}
+\label{sec:orgf3fcf26}
+\begin{itemize}
+\item Creation of system dynamics model for international regime effectiveness.
+\end{itemize}
+\subsubsection{What about costs? Will you finish on time?}
+\label{sec:orgccce367}
+\begin{itemize}
+\item Create calendar
+\end{itemize}
+\subsection{To consider}
+\label{sec:org62b261c}
+\begin{itemize}
+\item Check what I like about Bas' \& Prof. Detlef's proposals and  add it here
+\item Check whether Philipp \& Oscar write in third person or in first person
+\item 'Write tight'
+\item Write enough (8 pages max with the necessary ammount of information)
+\item Write for the 'non-expert' (this is important, because I may end up wanting to show this to the wider audience)
+\item Do your homework - make sure everything is accurate
+\item Don't overquote
+\end{itemize}
+\section{Sections}
+\label{sec:org06be618}
+\subsection{Title: International Regime Effectiveness - Complexity As The Path Towards Global Sustainability}
+\label{sec:org6b52cde}
+\subsection{Abstract}
+\label{sec:org72873c4}
+Most international regimes governing areas related to environmental sustainability have consistently reached low levels of impact effectiveness. This phenomenon has recieved substancial scholar attention for the last three decades, and yet it remains unclear what constitute the drivers of (impact) effectiveness. Practically, this translates in unachieved goals, and thus, further environmental deterioration. I argue that one critical aspect accounting for the inconclusive results from studies around this topic, is that the potential drivers of effectiveness have always been investigated independently, failing to account for the effects that arise from their interaction. In this research project I aim to re-addres the effectiveness question through the lens of complexity science. This project is guided by the central premise of systems thinking that in order to perform effective problem solving it is necessary to understand the underlying structure of the system. As such, the main contribution of this investigation will be the creation and validation of a simulation model of the underlying structure of the international regimes system. Afterwards, this model will allow to generate and test hypotheses, enabling a more certain identification of critical features for (impact) effectiveness in the system, or the lack thereoff.
+\subsection{Aims/objectives}
+\label{sec:orgc154ef3}
+The overarching aim of this project is to contribute towards the solution of common problems on a global level by sheding light on the underlying structure of the international regime system, and thus enable a clear identification of the (impact) effectiveness drivers. The development of this project would contribute to the following obbjectives:
+\begin{enumerate}
+\item improve the scientific understanding of the effects produced by interactions between the regime characteristics most widely accepted as potential effectiveness drivers,
+\item improve the scientific understanding of the possibilities for optimization of existing international regimes, and the design of new ones, and
+\item support the global governing process related to environmental sustainability, and sustainable development in general.
+\end{enumerate}
+\subsection{Research question/hypothesis}
+\label{sec:org72549dd}
+After repeated efforts to identify the effectiveness drivers for international regimes through a variety of different research designs, results remain ambiguous and the consensus among experts seems to be shifting towards the recognition that there are no panaceas when it comes to regime effectiveness. In this project I aim to re-adress the scientific question of \textbf{what constitute the critical elements of an international regime that lead to increased levels of impact effectiveness} by uncovering the underlying structure of the system at play. While fully acknowledging the conclusions reached by previous studies, as well as exerting caution not to pursue miraculous silver bullets, I argue that the field of complexity science may offer a better fitting methodology to analyze this question.
+Because of the nature of this approach (see section on methods), the hypothesizing process is emergent, and thus at this point it is only possible to state that it will revolve around deepening the understanding of the system's behaviour. More specifically, the hypotheses will make predictions of how the impact effectiveness levels will behave, whenever an explanatory variable is added, eliminated, or its parameter is modified in a certain way. The simulation model itself will serve as the main hypothesis testing tool.
+\subsection{Background}
+\label{sec:org4201b14}
+Get inspiration from Detlef but add studies from Biermann
+\subsection{Literature review}
+\label{sec:orgb79efe3}
+\subsection{Theoretical perspectives}
+\label{sec:org88d3b1e}
+\subsection{Methodology}
+\label{sec:orgc79e35e}
+the project is divided in two stages. In a first instance, a system dynamics simulation model is built and validated. The second stage beginns only after the model has been calibrated such that it reliably mirrors the behavior of the system under study. Once that is the case, the model itself guides the hypothesis-making process, and at the same time, it serves as the tool to test them. Accordingly, altough this study does aim to test the relationship between variables (taking their interactions into account),
+\subsection{Methods}
+\label{sec:org15e5ac6}
+\subsection{Respondents}
+\label{sec:orge25da4a}
+\subsection{Limitations/delimitations}
+\label{sec:org57f043f}
+\subsection{Ethical considerations}
+\label{sec:org922b1e0}
+\subsection{Timelines}
+\label{sec:orgd66f6ab}
+\subsection{Budget/funding}
+\label{sec:org1f99f53}
+\subsection{References}
+\label{sec:org914b77a}
+\end{document}
